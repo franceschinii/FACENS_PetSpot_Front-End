@@ -5,7 +5,7 @@
 }
 
 :root { 
-    --text-color: white;
+    --text-color: black;
     --bg-url: url();
     --stroke-color: rgba(255, 255, 255, 0.50);
     --surface-color: rgba(255, 255, 255, 0.10);
@@ -42,6 +42,6 @@ body * {
     }
 
     .light {
-        --bg-url: url();
+        --bg-url: url(./assets/bg-desktop-light.jpg);
     }
 }

@@ -19,20 +19,186 @@
     />
   </head>
   <body>
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand">Navbar</a>
-        <form class="d-flex" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
+        <a class="navbar-brand" href="#">
+          <img
+            src="/docs/5.3/assets/brand/bootstrap-logo.svg"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
           />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+          Bootstrap
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
       </div>
     </nav>
+    <div class="container">
+      <div class="row align-items-center py-4">
+        <div class="col">
+          <img src="https://conta.vetsmart.com.br/images/sign_up_figure.svg" />
+        </div>
+        <div class="col">
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label for="" class="form-label">Nome</label>
+              <input
+                type="text"
+                class="form-control"
+                id=""
+                placeholder="Anrry"
+                aria-label="Anrry"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="" class="form-label">Sobrenome</label>
+              <input
+                type="text"
+                class="form-control"
+                id=""
+                placeholder="Petrin"
+                aria-label="Petrin"
+              />
+            </div>
+            <div class="col-12">
+              <label for="" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="anrrypetrin@petspot.com"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="" class="form-label">Senha</label>
+              <input
+                type="password"
+                class="form-control"
+                id=""
+                placeholder="********"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="" class="form-label">Repita sua senha</label>
+              <input
+                type="password"
+                class="form-control"
+                id=""
+                placeholder="********"
+              />
+            </div>
+            <div id="passwordHelpBlock" class="form-text">
+              Sua senha deve ter no mínimo 8 caracteres, no mínimo uma letra
+              maiúscula e outra minúscula, números e 1 carácter especial.
+            </div>
+            <div class="col-md-2">
+              <label for="" class="form-label">País</label>
+              <select id="" class="form-select">
+                <option selected>(+55)</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="" class="form-label">Telefone</label>
+              <input
+                type="tel"
+                class="form-control"
+                id=""
+                placeholder="(12) 34567-8910"
+              />
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+              <label for="" class="form-label">Data de nascimento</label>
+              <input type="date" class="form-control" id="" />
+            </div>
+            <div class="col-md-8 py-4">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="gridCheck"
+                />
+                <label class="form-check-label" for="gridCheck">
+                  Eu quero receber comunicações sobre conteúdo e novidades do
+                  PetSpot por e-mail e notificação.
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="gridCheck"
+                />
+                <label class="form-check-label" for="gridCheck">
+                  Concordo com os
+                  <a href="#" style="text-decoration: none">Termos de Uso</a>
+                  do PetSpot.
+                </label>
+              </div>
+            </div>
+            <div class="col-md-4 py-4 d-flex align-items-center">
+              <button type="submit" class="btn btn-primary">
+                Cadastrar-se
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div
         id="carouselExampleSlidesOnly"
