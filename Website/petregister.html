@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styleregister.css">
+  </head>
+
+  <body>
+    <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="\IDV\Logotipo\PetSpot-PNG.png"
+            alt="PetSpot"
+            width="auto"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Desativado</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="d-flex align-items-start" id="cadastrodiv">
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-start">
+          <div class="col-lg-6">
+                <h1 class="">Cadastre seu Pet!</h1>
+                <form>
+                  <div class="row mb-3">
+                    <div class="col-12">
+                      <label for="nome" class="form-label">Nome do Pet</label>
+                      <input type="text" class="form-control" id="nome" name="nome" placeholder="Garfield">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-4">
+                      <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+                      <input type="date" class="form-control" id="dataNascimento" name="dataNascimento">
+                    </div>
+                    <div class="col-4">
+                      <label for="genero" class="form-label">Gênero</label>
+                      <select class="form-select" id="genero" name="genero">
+                        <option value="macho">Macho</option>
+                        <option value="femea">Fêmea</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <label for="genero" class="form-label">Comportamento</label>
+                      <select class="form-select" id="comportamento" name="comportamento">
+                        <option value="Calmo">Calmo</option>
+                        <option value="Brincalhão">Brincalhão</option>
+                        <option value="Arisco">Arisco</option>
+                        <option value="Agressivo">Agressivo</option>
+                      </select>
+                    </div>
+                  </div>
+                    <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="raca" class="form-label">Raça</label>
+                      <input type="text" class="form-control" id="raca" name="raca" placeholder="Vira-Lata">
+                    </div>
+                    <div class="col-6">
+                      <label for="porte" class="form-label">Porte</label>
+                      <select class="form-select" id="porte" name="porte">
+                        <option value="pequeno">Pequeno</option>
+                        <option value="medio">Médio</option>
+                        <option value="grande">Grande</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label class="form-check-label">Castrado?</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="castrado" id="castradoSim" value="sim" checked>
+                        <label class="form-check-label" for="castradoSim">
+                          Sim
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="castrado" id="castradoNao" value="nao">
+                        <label class="form-check-label" for="castradoNao">
+                          Não
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <label class="form-check-label">Tomou principais vacinas?</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="vacinas" id="vacinasSim" value="sim">
+                        <label class="form-check-label" for="vacinasSim">
+                          Sim
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="vacinas" id="vacinasNao" value="nao" checked>
+                        <label class="form-check-label" for="vacinasNao">
+                          Não
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary" id="botaoCadastrar">Cadastrar</button>
+                </form>
+              
+            
+          </div>
+          <div class="col-lg-6">
+            <img class="img-fluid" src="image-from-rawpixel-id-6791429-png.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scriptregister.js"></script>
+  </body>
+</html>
