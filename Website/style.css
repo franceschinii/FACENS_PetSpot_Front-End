@@ -39,6 +39,8 @@ body * {
 
 .nav-icon {
     font-size: 36px;
+    display: flex;
+    align-items: center;
 }
 
 .div-cadastro{
