@@ -45,7 +45,7 @@ body * {
 }
 
 .nav-link {
-    color: var(--brand-color);
+    color: var(--text-color);
 }
 
 /* pet register screen */
