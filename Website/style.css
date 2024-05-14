@@ -35,6 +35,16 @@ body * {
     color: var(--text-color);
 }
 
+/* nav-icons */
+
+.nav-icon {
+    font-size: 36px;
+}
+
+.div-cadastro{
+    height: 79vh;
+}
+
 /* media queries */
 @media  (min-width: 700px) {
     :root {
