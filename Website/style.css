@@ -5,6 +5,7 @@
 }
 
 :root { 
+    --brand-color: #3F9EFF;
     --text-color: black;
     --bg-url: url();
     --stroke-color: rgba(255, 255, 255, 0.50);
@@ -32,18 +33,24 @@ body {
 
 body * {
     font-family: 'Inter', sans-serif;
-    color: var(--text-color);
 }
 
-/* nav-icons */
+/* navbar */
 
 .nav-icon {
     font-size: 36px;
     display: flex;
     align-items: center;
+    color: var(--brand-color);
 }
 
-.div-cadastro{
+.nav-link {
+    color: var(--brand-color);
+}
+
+/* pet register screen */
+
+.div-pet-register{
     height: 79vh;
 }
 
