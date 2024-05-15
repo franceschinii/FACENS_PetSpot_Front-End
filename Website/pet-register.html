@@ -22,9 +22,7 @@
             <img
               src="\IDV\Logotipo\PetSpot-PNG.png"
               alt="PetSpot"
-              width="auto"
-              height="24"
-              class="d-inline-block align-text-top"
+              class="nav-brand-icon d-inline-block align-text-top"
             />
           </a>
           <button
@@ -51,19 +49,56 @@
               </li>
             </ul>
             <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item dropdown">
-                <a class="nav-icon" data-bs-toggle="dropdown">
+              <li class="nav-item d-flex">
+                <a class="nav-icon" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                   <ion-icon name="person-circle-outline"></ion-icon>
+                <span class="nav-icon-span mx-2">Minha conta</span>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="#">Minha conta</a></li>
-                  <li><a class="dropdown-item" href="#">Meus pets</a></li>
-                </ul>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            Some text as placeholder. In real life you can have the elements you
+            have chosen. Like, text, images, lists, etc.
+          </div>
+          <div class="dropdown mt-3">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+            >
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Another action</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <!-- Final da seção da navbar -->
     </header>
     <main>
