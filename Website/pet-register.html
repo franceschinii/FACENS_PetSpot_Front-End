@@ -50,9 +50,15 @@
             </ul>
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item d-flex">
-                <a class="nav-icon" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                <a
+                  class="nav-icon"
+                  data-bs-toggle="offcanvas"
+                  href="#offCanvasMinhaConta"
+                  role="button"
+                  aria-controls="offCanvasMinhaConta"
+                >
                   <ion-icon name="person-circle-outline"></ion-icon>
-                <span class="nav-icon-span mx-2">Minha conta</span>
+                  <span class="nav-icon-span mx-2">Minha conta</span>
                 </a>
               </li>
             </ul>
@@ -62,11 +68,13 @@
       <div
         class="offcanvas offcanvas-end"
         tabindex="-1"
-        id="offcanvasExample"
-        aria-labelledby="offcanvasExampleLabel"
+        id="offCanvasMinhaConta"
+        aria-labelledby="offCanvasMinhaContaLabel"
       >
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+          <h4 class="offcanvas-title" id="offCanvasMinhaContaLabel">
+            Bem vindo(a) de volta!
+          </h4>
           <button
             type="button"
             class="btn-close"
@@ -76,26 +84,39 @@
         </div>
         <div class="offcanvas-body">
           <div>
-            Some text as placeholder. In real life you can have the elements you
-            have chosen. Like, text, images, lists, etc.
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Gerencie seu perfil PetSpot</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Altere suas preferências, ou modifique suas informações
+                  pessoais.
+                </h6>
+                <button
+                  class="btn btn-outline-primary"
+                  href="user-register.html"
+                >
+                  Gerenciar perfil
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="dropdown mt-3">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-            >
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li>
-                <a class="dropdown-item" href="#">Another action</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </li>
-            </ul>
+          <br />
+          <div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Gerencie seus Pets</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Adicione ou remova seus pets da sua família, ou altere
+                  informaçõespessoais e preferências do seu pet.
+                </h6>
+                <button
+                  class="btn btn-outline-primary"
+                  href="user-register.html"
+                >
+                  Gerenciar Pets
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
