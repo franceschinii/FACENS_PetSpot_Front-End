@@ -100,22 +100,60 @@
               </a>
             </div>
           </div>
-          <br />
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Entre na sua conta PetSpot</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">
-                Acesse o painel administrativo da sua conta PetSpot, e gerencie seus Pets.
-              </h6>
-              <a href="user-login.html" class="btn btn-outline-primary">
-                Conectar-se
-              </a>
-            </div>
-          </div>
         </div>
       </div>
       <!-- Final da seção da navbar -->
     </header>
+    <div class="container">
+      <div class="row d-flex justify-content-center align-items-center py-5">
+        <div class="col-4">
+          <form class="row g-4 justify-content-start">
+            <div class="col-sm-12">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="anrrypetrin@petspot.com"
+              />
+            </div>
+            <div class="col-sm-12">
+              <label for="senha" class="form-label">Senha</label>
+              <input
+                type="password"
+                class="form-control"
+                id="senha"
+                placeholder="*********"
+              />
+            </div>
+            <div class="col-sm-12">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="termos-check"
+                />
+                <label class="form-check-label" for="termos-check">
+                  Mantenha me conectado
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-12 d-flex justify-content-between">
+              <a class="py-2" href="forgot-password.html"
+                >Esqueci minha senha</a
+              >
+              <button
+                type="submit"
+                class="btn btn-primary"
+                id="botao-cadastrar"
+              >
+                Entrar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
