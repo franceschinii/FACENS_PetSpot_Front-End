@@ -26,7 +26,6 @@ class Usuario {
   }
 }
 // Função que irá lidar com o envio do formulário
-// Função que irá lidar com o envio do formulário
 function handleFormSubmission(event) {
     // Impedir o comportamento padrão do formulário(Recarregar página)
     event.preventDefault();
