@@ -91,12 +91,9 @@
                   Altere suas preferências, ou modifique suas informações
                   pessoais.
                 </h6>
-                <button
-                  class="btn btn-outline-primary"
-                  href="user-register.html"
-                >
+                <a class="btn btn-outline-primary" href="user-profile.html">
                   Gerenciar perfil
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -109,12 +106,9 @@
                   Adicione ou remova seus pets da sua família, ou altere
                   informaçõespessoais e preferências do seu pet.
                 </h6>
-                <button
-                  class="btn btn-outline-primary"
-                  href="user-register.html"
-                >
+                <a class="btn btn-outline-primary" href="pet-list.html">
                   Gerenciar Pets
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -127,7 +121,8 @@
         <div class="container mt-5">
           <div class="row d-flex justify-content-start">
             <div class="col-lg-6">
-              <h1 class="">Cadastre seu Pet!</h1>
+              <h1 class="">Cadastre seu Pet</h1>
+              <br />
               <form>
                 <div class="row mb-3">
                   <div class="col-12">
@@ -137,7 +132,7 @@
                       class="form-control"
                       id="nome"
                       name="nome"
-                      placeholder="Garfield"
+                      placeholder="Mica"
                     />
                   </div>
                 </div>
@@ -154,7 +149,9 @@
                     />
                   </div>
                   <div class="col-4">
-                    <label for="genero" class="form-label">Gênero</label>
+                    <label for="genero" class="form-label"
+                      >Sexo biológico</label
+                    >
                     <select class="form-select" id="genero" name="genero">
                       <option value="macho">Macho</option>
                       <option value="femea">Fêmea</option>
@@ -182,12 +179,13 @@
                       class="form-control"
                       id="raca"
                       name="raca"
-                      placeholder="Vira-Lata"
+                      placeholder="Vira-lata"
                     />
                   </div>
                   <div class="col-6">
                     <label for="porte" class="form-label">Porte</label>
                     <select class="form-select" id="porte" name="porte">
+                      <option value="mini">Mini</option>
                       <option value="pequeno">Pequeno</option>
                       <option value="medio">Médio</option>
                       <option value="grande">Grande</option>
@@ -204,7 +202,6 @@
                         name="castrado"
                         id="castrado-sim"
                         value="sim"
-                        checked
                       />
                       <label class="form-check-label" for="castrado-sim">
                         Sim
@@ -217,6 +214,7 @@
                         name="castrado"
                         id="castrado-nao"
                         value="nao"
+                        checked
                       />
                       <label class="form-check-label" for="castrado-nao">
                         Não
@@ -225,7 +223,7 @@
                   </div>
                   <div class="col-6">
                     <label class="form-check-label"
-                      >Tomou principais vacinas?</label
+                      >Tomou as principais vacinas?</label
                     >
                     <div class="form-check">
                       <input

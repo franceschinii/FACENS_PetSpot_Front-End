@@ -161,31 +161,32 @@
               />
             </div>
             <div id="passwordHelpBlock" class="form-text">
-              Sua senha deve ter no mínimo 8 caracteres, uma letra maiúscula,
-              uma minúscula, um números e um 1 caractere especial.
+              Sua senha deve ter no mínimo 8 caracteres, incluindo uma letra maiúscula,
+              uma minúscula, um número e 1 caractere especial.
             </div>
-            <div class="col-md-2">
-              <label for="pais" class="form-label">País</label>
-              <select id="pais" class="form-select">
-                <option selected>(+55)</option>
-                <option>...</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-              <label for="telefone" class="form-label">Telefone</label>
-              <input
-                type="tel"
-                class="form-control"
-                id="telefone"
-                placeholder="(12) 34567-8910"
-              />
-            </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
-              <label for="data-nascimento" class="form-label"
-                >Data de nascimento</label
-              >
-              <input type="date" class="form-control" id="data-nascimento" />
+            <div class="d-inline-flex">
+              <div class="col-md-4 me-auto">
+                <label for="data-nascimento" class="form-label"
+                  >Data de nascimento</label
+                >
+                <input type="date" class="form-control" id="data-nascimento" />
+              </div>
+              <div class="col-md-2 mx-3">
+                <label for="pais" class="form-label">País</label>
+                <select id="pais" class="form-select">
+                  <option selected>(+55)</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="telefone"
+                  placeholder="(12) 34567-8910"
+                />
+              </div>
             </div>
             <div class="col-md-8 py-4">
               <div class="form-check">
@@ -212,7 +213,9 @@
                 </label>
               </div>
             </div>
-            <div class="col-md-4 py-4 d-flex align-items-center">
+            <div
+              class="col-md-4 py-4 d-flex justify-content-end align-items-center"
+            >
               <button
                 type="submit"
                 class="btn btn-primary"
