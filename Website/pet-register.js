@@ -5,6 +5,7 @@ class Pet {
     dataNascimento,
     genero,
     comportamento,
+    especie,
     raca,
     porte,
     castrado,
@@ -15,6 +16,7 @@ class Pet {
     this.dataNascimento = dataNascimento;
     this.genero = genero;
     this.comportamento = comportamento;
+    this.especie = especie;
     this.raca = raca;
     this.porte = porte;
     this.castrado = castrado;
@@ -32,6 +34,7 @@ function handleFormSubmission(event) {
     document.getElementById("data-nascimento").value,
     document.getElementById("genero").value,
     document.getElementById("comportamento").value,
+    document.getElementById("especie").value,
     document.getElementById("raca").value,
     document.getElementById("porte").value,
     document.querySelector('input[name="castrado"]:checked').value,
