@@ -19,7 +19,7 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
             <img
-              src="\IDV\Logotipo\PetSpot-PNG.png"
+              src="../IDV/Logotipo/PetSpot-PNG.png"
               alt="PetSpot"
               class="nav-brand-icon d-inline-block align-text-top"
             />
@@ -122,19 +122,33 @@
       <!-- Final da seção da navbar -->
     </header>
     <main>
-      <div class="container mt-5">
-        <div class="row">
+      <div class="container mt-5 d-flex">
+        <div class="row justify-content-center">
           <!-- Card 1 -->
-          <div class="col-md-3">
+          <div class="col-md-3 position-relative">
+            <div class="position-absolute modal-icon-div" id="botao-modal">
+              <a type="button" data-bs-toggle="modal" data-bs-target="#modal1">
+                <ion-icon
+                  name="ellipsis-horizontal"
+                  class="modal-icon"
+                ></ion-icon>
+              </a>
+            </div>
             <div class="card">
-              <img src="https://static.vecteezy.com/ti/fotos-gratis/p2/6170421-lindo-gato-listrado-cinza-sentado-ao-ar-livre-no-parque-foto.jpg" class="card-img-top" alt="...">
+              <img
+                src="https://static.vecteezy.com/ti/fotos-gratis/p2/6170421-lindo-gato-listrado-cinza-sentado-ao-ar-livre-no-parque-foto.jpg"
+                class="card-img-top"
+                alt="..."
+              />
               <div class="card-body">
-                <h5 class="text-center">Maggie</h5>
+                <h5 class="text-center" id="nome">Maggie</h5>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Idade: <b id="Idade">14 anos</b></li>
-                <li class="list-group-item">Sexo: <b id="Sexo">Fêmea</b></li>
-                <li class="list-group-item">Raça: <b id="Raça">Vira-Lata</b></li>
+                <li class="list-group-item">Idade: <b id="idade">9 anos</b></li>
+                <li class="list-group-item">Sexo: <b id="sexo">Fêmea</b></li>
+                <li class="list-group-item">
+                  Raça: <b id="raca">Vira-Lata</b>
+                </li>
               </ul>
             </div>
           </div>
@@ -149,6 +163,103 @@
         </div>
       </div>
     </main>
+    <!-- Modal 1 -->
+    <div
+      class="modal fade"
+      id="modal1"
+      tabindex="-1"
+      aria-labelledby="visualização dos pets"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="nome">Maggie</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-group">
+              <li class="list-group-item">
+                Data de Nascimento: <b id="data-nascimento">23/12/2014</b>
+              </li>
+              <li class="list-group-item">Sexo: <b id="sexo">Fêmea</b></li>
+              <li class="list-group-item">
+                Comportamento: <b id="comportamento">Arisco</b>
+              </li>
+              <li class="list-group-item">Espécie: <b id="especie">Gato</b></li>
+              <li class="list-group-item">Raça: <b id="raca">Vira-Lata</b></li>
+              <li class="list-group-item">Peso: <b id="peso">6kg</b></li>
+              <li class="list-group-item">Porte: <b id="porte">Pequeno</b></li>
+              <li class="list-group-item">
+                Castrado: <b id="castrado">Sim</b>
+              </li>
+              <li class="list-group-item">Vacinado: <b id="vacinas">Não</b></li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-toggle="modal"
+              data-bs-target="#modal2"
+            >
+              Editar
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal 1-->
+
+    <!-- Modal 2-->
+    <div
+      class="modal fade"
+      id="modal2"
+      tabindex="-1"
+      aria-labelledby="modal2"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h3>Você quer editar os dados do seu pet?</h3>
+          </div>
+          <div class="modal-footer">
+            <a href="pet-editor.html" type="button" class="btn btn-secondary"
+              >Sim</a
+            >
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Não
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal 2-->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

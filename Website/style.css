@@ -80,6 +80,21 @@ body * {
     height: 79vh;
 }
 
+/* pet list screen */
+
+.modal-icon {
+    font-size: 2.5rem;
+    z-index: 1;
+    color: rgba(0,0,0,0.2);
+    fill: white;
+}
+
+.modal-icon-div {
+    top: 0.5vh;
+    right: 1.5vw;
+    z-index: 1;
+}
+
 /* media queries */
 @media  (min-width: 700px) {
     :root {
