@@ -78,7 +78,7 @@
       >
         <div class="offcanvas-header">
           <h4 class="offcanvas-title" id="offCanvasMinhaContaLabel">
-            Bem vindo(a) ao PetSpot!
+            Bem vindo(a) de volta!
           </h4>
           <button
             type="button"
@@ -88,72 +88,55 @@
           ></button>
         </div>
         <div class="offcanvas-body">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Crie sua conta PetSpot</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">
-                Tenha acesso a todos os recursos do PetSpot, podendo cadastrar
-                seus pets e gerenciá-los.
-              </h6>
-              <a href="user-register.html" class="btn btn-outline-primary">
-                Registrar-se
-              </a>
+          <div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Gerencie seu perfil PetSpot</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Altere suas preferências, ou modifique suas informações
+                  pessoais.
+                </h6>
+                <a class="btn btn-outline-primary" href="user-profile.html">
+                  Gerenciar perfil
+                </a>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Gerencie seus Pets</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Remova seus pets da sua família, ou altere
+                  informações pessoais e preferências do seu pet.
+                </h6>
+                <a class="btn btn-outline-primary" href="pet-list.html">
+                  Gerenciar Pets
+                </a>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Adicione um Pet</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Cadastre um pet à sua família Petspot.
+                </h6>
+                <a class="btn btn-outline-primary" href="pet-register.html">
+                  Adicionar Pets
+                </a>
+              </div>
             </div>
           </div>
         </div>
+
+        
       </div>
       <!-- Final da seção da navbar -->
     </header>
-    <div class="container">
-      <div class="row d-flex justify-content-center align-items-center py-5">
-        <div class="col-4">
-          <form class="row g-4 justify-content-start" id="login-form">
-            <div class="col-sm-12">
-              <label for="email" class="form-label">Email</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="anrrypetrin@petspot.com"
-              />
-            </div>
-            <div class="col-sm-12">
-              <label for="senha" class="form-label">Senha</label>
-              <input
-                type="password"
-                class="form-control"
-                id="senha"
-                placeholder="*********"
-              />
-            </div>
-            <div class="col-sm-12">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="termos-check"
-                />
-                <label class="form-check-label" for="termos-check">
-                  Mantenha me conectado
-                </label>
-              </div>
-            </div>
-            <div class="col-sm-12 d-flex justify-content-between">
-              <a class="py-2" href="forgot-password.html"
-                >Esqueci minha senha</a
-              >
-              <button
-                type="submit"
-                class="btn btn-primary"
-                id="botao-cadastrar"
-              >
-                Entrar
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -167,6 +150,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="./user-login.js"></script>
+    <script src="./user-register.js"></script>
   </body>
 </html>
