@@ -76,24 +76,23 @@ body * {
 
 /* pet register screen */
 
-.div-pet-register{
+.div-pet-register {
     height: 79vh;
 }
 
 /* pet list screen */
 
-.modal-icon{
-    font-size: 2.25rem;
+.modal-icon {
+    font-size: 2.5rem;
     z-index: 1;
+    color: rgba(0,0,0,0.2);
+    fill: white;
 }
-.modal-icon-div{
-    border: 1px hidden gray;
-    background-color: gray;
-    top: -12px;
-    right: 0;
+
+.modal-icon-div {
+    top: 0.5vh;
+    right: 1.5vw;
     z-index: 1;
-    height: 36px;
-    border-radius: 50%;
 }
 
 /* media queries */
