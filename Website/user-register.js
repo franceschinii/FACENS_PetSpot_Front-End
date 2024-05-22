@@ -118,7 +118,8 @@ function enviarDadosParaBackend(usuario) {
     // Lidar com os dados retornados pelo backend
     .then((data) => {
       console.log("Dados enviados com sucesso:", data);
-      // Faça o que for necessário após o envio bem-sucedido
+      window.location.href = `index-logged.html/${data.id}`;
+      // Redirecionar o usuário para a página index-logged com o id do usuário
     })
     .catch((error) => {
       console.error("Erro:", error);
