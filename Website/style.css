@@ -95,6 +95,20 @@ body * {
     z-index: 1;
 }
 
+/*   .fixed-card {
+    width: 315px;
+    height: 420px;
+  } */
+  .card-column{
+    width: 315px;
+    height: 420px;
+  }
+  .fixed-card .card-img-top {
+    height: 225px;
+    width: 100%;
+    object-fit:cover;
+  }
+
 /* media queries */
 @media  (min-width: 700px) {
     :root {
