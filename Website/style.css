@@ -88,13 +88,28 @@ body * {
     color: rgba(0,0,0,0.2);
     fill: white;
 }
-
+.add-pet-icon {
+    font-size: 4rem;
+}
 .modal-icon-div {
     top: 0.5vh;
     right: 1.5vw;
     z-index: 1;
 }
 
+.card-column {
+    width: 315px;
+    height: 420px;
+}
+.fixed-card .card-img-top {
+    height: 225px;
+    width: 100%;
+    object-fit:cover;
+}
+.add-pet-card {
+    height: 413px;
+    width: 291px;
+}
 /* media queries */
 @media  (min-width: 700px) {
     :root {

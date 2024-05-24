@@ -27,65 +27,79 @@ class Usuario {
 }
 // Função que irá lidar com o envio do formulário
 function handleFormSubmission(event) {
-    // Impedir o comportamento padrão do formulário(Recarregar página)
-    event.preventDefault();
-  
-    // Obter os valores dos campos do formulário
-    const nome = document.getElementById("nome").value;
-    const sobrenome = document.getElementById("sobrenome").value;
-    const email = document.getElementById("email").value;
-    const senha = document.getElementById("senha").value;
-    const repetirSenha = document.getElementById("repetir-senha").value;
-    const pais = document.getElementById("pais").value;
-    const telefone = document.getElementById("telefone").value;
-    const dataNascimento = document.getElementById("data-nascimento").value;
-    const newsletterCheck = document.getElementById("newsletter-check").checked;
-    const termosCheck = document.getElementById("termos-check").checked;
-  
-    // Verificar se a senha atende aos critérios
-    const senhaValida = verificarSenha(senha);
-  
-    // Verificar se a repetição de senha corresponde à senha original
-    const senhasCoincidem = senha === repetirSenha;
-  
-    // Verificar se o checkbox dos termos está marcado
-    if (!termosCheck) {
-      console.error("Você precisa concordar com os termos para se cadastrar.");
-      return;
-    }
-  
-    // Verificar se todos os critérios foram atendidos
-    if (!senhaValida || !senhasCoincidem) {
-      console.error("Por favor, verifique sua senha e sua repetição de senha.");
-      return;
-    }
-  
-    // Enviar dados para o backend
-    enviarDadosParaBackend(usuario);
+  // Impedir o comportamento padrão do formulário(Recarregar página)
+  event.preventDefault();
+
+  // Obter os valores dos campos do formulário
+  const nome = document.getElementById("nome").value;
+  const sobrenome = document.getElementById("sobrenome").value;
+  const email = document.getElementById("email").value;
+  const senha = document.getElementById("senha").value;
+  const repetirSenha = document.getElementById("repetir-senha").value;
+  const pais = document.getElementById("pais").value;
+  const telefone = document.getElementById("telefone").value;
+  const dataNascimento = document.getElementById("data-nascimento").value;
+  const newsletterCheck = document.getElementById("newsletter-check").checked;
+  const termosCheck = document.getElementById("termos-check").checked;
+
+  // Verificar se a senha atende aos critérios
+  const senhaValida = verificarSenha(senha);
+
+  // Verificar se a repetição de senha corresponde à senha original
+  const senhasCoincidem = senha === repetirSenha;
+
+  // Verificar se o checkbox dos termos está marcado
+  if (!termosCheck) {
+    console.error("Você precisa concordar com os termos para se cadastrar.");
+    return;
   }
-  
-  // Função para verificar se a senha atende aos critérios
-  function verificarSenha(senha) {
-    // Expressões regulares para verificar se a senha atende aos critérios
-    const regexLetraMaiuscula = /[A-Z]/;
-    const regexLetraMinuscula = /[a-z]/;
-    const regexNumero = /[0-9]/;
-    const regexCaractereEspecial = /[!@#$%^&*(),.?":{}|<>]/;
-  
-    // Verificar se a senha atende a todos os critérios
-    return (
-      senha.length >= 8 &&
-      regexLetraMaiuscula.test(senha) &&
-      regexLetraMinuscula.test(senha) &&
-      regexNumero.test(senha) &&
-      regexCaractereEspecial.test(senha)
-    );
+
+  // Verificar se todos os critérios foram atendidos
+  if (!senhaValida || !senhasCoincidem) {
+    console.error("Por favor, verifique sua senha e sua repetição de senha.");
+    return;
   }
-  
+
+  // Criar uma nova instância da classe Usuario
+  const usuario = new Usuario(
+    nome,
+    sobrenome,
+    email,
+    senha,
+    repetirSenha,
+    pais,
+    telefone,
+    dataNascimento,
+    newsletterCheck,
+    termosCheck
+  );
+
+  // Enviar dados para o backend
+  enviarDadosParaBackend(usuario);
+}
+
+// Função para verificar se a senha atende aos critérios
+function verificarSenha(senha) {
+  // Expressões regulares para verificar se a senha atende aos critérios
+  const regexLetraMaiuscula = /[A-Z]/;
+  const regexLetraMinuscula = /[a-z]/;
+  const regexNumero = /[0-9]/;
+  const regexCaractereEspecial = /[!@#$%^&*(),.?":{}|<>]/;
+
+  // Verificar se a senha atende a todos os critérios
+  return (
+    senha.length >= 8 &&
+    regexLetraMaiuscula.test(senha) &&
+    regexLetraMinuscula.test(senha) &&
+    regexNumero.test(senha) &&
+    regexCaractereEspecial.test(senha)
+  );
+}
+
 // Função que lida com o envio dos dados do Usuário para o backend
 function enviarDadosParaBackend(usuario) {
   // Fetch API para enviar os dados para a URL
-  fetch("https://664251513d66a67b3437020e.mockapi.io/usuario", {
+  fetch("http://localhost:8080/petspot/register", { 
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -104,7 +118,8 @@ function enviarDadosParaBackend(usuario) {
     // Lidar com os dados retornados pelo backend
     .then((data) => {
       console.log("Dados enviados com sucesso:", data);
-      // Faça o que for necessário após o envio bem-sucedido
+      window.location.href = `index-logged.html/${data.id}`;
+      // Redirecionar o usuário para a página index-logged com o id do usuário
     })
     .catch((error) => {
       console.error("Erro:", error);
