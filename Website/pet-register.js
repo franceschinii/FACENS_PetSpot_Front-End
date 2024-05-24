@@ -2,7 +2,7 @@
 class Pet {
   constructor(
     nome,
-    dataNascimento,
+    dataDeNascimento,
     genero,
     comportamento,
     especie,
@@ -13,7 +13,7 @@ class Pet {
   ) {
     // Atribuição dos parâmetros recebidos aos membros da classe
     this.nome = nome;
-    this.dataNascimento = dataNascimento;
+    this.dataDeNascimento = dataDeNascimento;
     this.genero = genero;
     this.comportamento = comportamento;
     this.especie = especie;
@@ -66,6 +66,7 @@ function enviarDadosParaBackend(pet) {
     // Lidar com os dados retornados pelo backend
     .then((data) => {
       console.log("Dados enviados com sucesso:", data);
+      window.location.href = "pet-list.html";
       // Faça o que for necessário após o envio bem-sucedido
     })
     .catch((error) => {
