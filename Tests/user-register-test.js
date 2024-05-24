@@ -100,7 +100,7 @@ class Usuario {
   // Função que lida com o envio dos dados do Usuário para o backend
   function enviarDadosParaBackend(usuario) {
     // Fetch API para enviar os dados para a URL
-    fetch("/petspot/register", { 
+    fetch("localhost:8080/petspot/register", { 
       method: "POST",
       headers: {
         "Content-Type": "application/json",
