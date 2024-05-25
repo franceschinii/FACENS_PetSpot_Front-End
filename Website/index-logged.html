@@ -152,9 +152,9 @@
       document.addEventListener("DOMContentLoaded", function () {
         const userId = sessionStorage.getItem("userId");
         if (userId) {
-          document.getElementById("manage-profile").href += `/userId=${userId}`;
-          document.getElementById("manage-pets").href += `/userId=${userId}`;
-          document.getElementById("add-pet").href += `/userId=${userId}`;
+          document.getElementById("manage-profile").href += `/${userId}`;
+          document.getElementById("manage-pets").href += `/meuspets/${userId}`;
+          document.getElementById("add-pet").href += `/pet-register/${userId}`;
         } else {
           console.error("User ID not found in sessionStorage");
         }
