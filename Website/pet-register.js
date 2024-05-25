@@ -47,7 +47,7 @@ function handleFormSubmission(event) {
 // Função que lida com o envio dos dados do Pet para o backend
 function enviarDadosParaBackend(pet) {
   // Fetch API para enviar os dados para a URL
-  fetch("/petspot/register", {
+  fetch(`/petspot/pets/${data.id}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
