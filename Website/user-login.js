@@ -4,20 +4,23 @@ document.getElementById("login-form").addEventListener("submit", async function 
   const email = document.getElementById("email").value;
   const senha = document.getElementById("senha").value;
 
-  const response = await fetch("/petspot/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ email: email, senha: senha }),
-  });
+  try {
+    const response = await fetch("https://664251513d66a67b3437020e.mockapi.io/usuario");
+    if (!response.ok) {
+      throw new Error("Erro ao buscar usuários");
+    }
 
-  if (response.ok) {
-    const data = await response.json();
-    sessionStorage.setItem("userId", data.id);
-    window.location.href = `index-logged.html/${data.id}`;
-  } else {
-    // Handle error
-    console.error("Erro ao fazer login");
+    const usuarios = await response.json();
+    const usuario = usuarios.find(user => user.email === email && user.senha === senha);
+
+    if (usuario) {
+      sessionStorage.setItem("userId", usuario.id);
+      window.location.href = `pet-list.html`;
+    } else {
+      alert("Email ou senha incorretos");
+    }
+  } catch (error) {
+    console.error("Erro ao fazer login", error);
+    alert("Erro ao fazer login");
   }
 });

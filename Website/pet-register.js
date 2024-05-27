@@ -47,7 +47,7 @@ function handleFormSubmission(event) {
 // Função que lida com o envio dos dados do Pet para o backend
 function enviarDadosParaBackend(pet) {
   // Fetch API para enviar os dados para a URL
-  fetch(`/petspot/pets/${data.id}`, {
+  fetch(`https://664251513d66a67b3437020e.mockapi.io/pets`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
