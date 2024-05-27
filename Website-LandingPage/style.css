@@ -1,0 +1,92 @@
+/* google fonts import */
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+.varela-round-regular {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* divs */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root { 
+    --brand-color: #3F9EFF;
+    --text-color: black;
+    --bg-url: url();
+    --stroke-color: rgba(255, 255, 255, 0.50);
+    --surface-color: rgba(255, 255, 255, 0.10);
+    --surface-color-hover: rgba(0, 0, 0, 0.05);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+    --switch-bg-url: url();
+
+}
+
+.light {
+    --text-color: black;
+    --bg-url: url();
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --switch-bg-url: url();
+}
+
+body {
+    background: var(--bg-url) no-repeat top center/cover;
+    height: 100vh;
+}
+
+body * {
+    font-family: 'Varela Round', sans-serif;
+}
+
+
+/* navbar */
+
+.nav-brand-icon {
+    width: auto;
+    height: 30px;
+}
+
+.nav-icon-span {
+    display: flex;
+    align-items: center;
+    color: var(--brand-color);
+    font-size: 20px;
+}
+
+.nav-icon {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    color: var(--brand-color);
+    text-decoration: none;
+}
+
+.nav-link {
+    color: var(--text-color);
+}
+
+/* pet register screen */
+
+.div-pet-register{
+    height: 79vh;
+}
+
+/* media queries */
+@media  (min-width: 700px) {
+    :root {
+        --bg-url: url();
+    }
+
+    .light {
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+}
