@@ -1,7 +1,7 @@
 // Função para fazer uma solicitação à API e criar os cards
 function fetchData() {
     // URL da API
-    const apiUrl = 'https://664251513d66a67b3437020e.mockapi.io/pets';
+    const apiUrl = `/petspot/pets/${data.id}`;
 
     // Fazendo a solicitação GET
     fetch(apiUrl)
@@ -46,9 +46,9 @@ function createCards(data) {
             itemIdade.classList.add('list-group-item');
             itemIdade.textContent = 'Data de Nascimento: ' + item.dataDeNascimento;
 
-            const itemSexo = document.createElement('li');
-            itemSexo.classList.add('list-group-item');
-            itemSexo.textContent = 'Sexo: ' + item.genero;
+            const itemGenero = document.createElement('li');
+            itemGenero.classList.add('list-group-item');
+            itemGenero.textContent = 'Sexo: ' + item.genero;
 
             const itemRaca = document.createElement('li');
             itemRaca.classList.add('list-group-item');
@@ -56,7 +56,7 @@ function createCards(data) {
 
             // Adicionando elementos HTML ao DOM
             listGroup.appendChild(itemIdade);
-            listGroup.appendChild(itemSexo);
+            listGroup.appendChild(itemGenero);
             listGroup.appendChild(itemRaca);
 
             cardBody.appendChild(nome);

@@ -90,12 +90,13 @@
                   Altere suas preferências, ou modifique suas informações
                   pessoais.
                 </h6>
-                <button
+                <a
+                  id="manage-profile"
                   class="btn btn-outline-primary"
-                  href="user-register.html"
+                  href="user-profile.html"
                 >
                   Gerenciar perfil
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -103,17 +104,17 @@
           <div>
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Gerencie seus Pets</h5>
+                <h5 class="card-title">Adicione um Pet</h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">
-                  Adicione ou remova seus pets da sua família, ou altere
-                  informaçõespessoais e preferências do seu pet.
+                  Cadastre um pet à sua família Petspot.
                 </h6>
-                <button
+                <a
+                  id="add-pet"
                   class="btn btn-outline-primary"
-                  href="user-register.html"
+                  href="pet-register.html"
                 >
-                  Gerenciar Pets
-                </button>
+                  Adicionar Pets
+                </a>
               </div>
             </div>
           </div>
@@ -145,9 +146,14 @@
                 <div class="row-md-12">
                   <h5 class="text-center" id="nome">Cadastrar outro pet</h5>
                 </div>
-                <div class="row ">
+                <div class="row">
                   <div class="col d-flex justify-content-center mt-3">
-                    <a href="pet-register.html" type="button" class="btn btn-primary">
+                    <a
+                      id="add-pet"
+                      href="pet-register.html"
+                      type="button"
+                      class="btn btn-primary"
+                    >
                       <ion-icon
                         class="add-pet-icon"
                         name="add-outline"
@@ -271,6 +277,18 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const userId = sessionStorage.getItem("userId");
+        if (userId) {
+          document.getElementById("manage-profile").href += `/${userId}`;
+          document.getElementById("manage-pets").href += `/meuspets/${userId}`;
+          document.getElementById("add-pet").href += `/pet-register/${userId}`;
+        } else {
+          console.error("User ID not found in sessionStorage");
+        }
+      });
+    </script>
     <script src="pet-list.js"></script>
   </body>
 </html>
