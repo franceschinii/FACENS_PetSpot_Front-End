@@ -209,7 +209,7 @@ function createCards(data) {
                } else {
                    // Se não houver dados retornados pela API
                    const errorMessage = document.createElement('p');
-                   errorMessage.textContent = 'Nenhum animal encontrado.';
+                   console.log('Nenhum animal encontrado.');
                    container.appendChild(errorMessage);
                }
            }
