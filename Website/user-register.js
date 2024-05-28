@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     
-      const response = await fetch("http://localhost:8080/petspot/register", {
+      const response = await fetch("https://664251513d66a67b3437020e.mockapi.io/usuario", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const data = await response.json();
       if (response.ok) {
         alert("Cadastro realizado com sucesso!");
-        window.location.href = "/PetSpot-FrontEnd-main/Website/user-login.html"; // Redireciona para a página de login
+        window.location.href = "user-login.html"; // Redireciona para a página de login
       } else {
      
         alert(`Erro: ${data.message}`);

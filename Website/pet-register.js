@@ -7,6 +7,7 @@ class Pet {
     comportamento,
     especie,
     raca,
+    peso,
     porte,
     castrado,
     vacinas
@@ -18,6 +19,7 @@ class Pet {
     this.comportamento = comportamento;
     this.especie = especie;
     this.raca = raca;
+    this.peso = peso;
     this.porte = porte;
     this.castrado = castrado;
     this.vacinas = vacinas;
@@ -36,6 +38,7 @@ function handleFormSubmission(event) {
     document.getElementById("comportamento").value,
     document.getElementById("especie").value,
     document.getElementById("raca").value,
+    document.getElementById("peso").value,
     document.getElementById("porte").value,
     document.querySelector('input[name="castrado"]:checked').value,
     document.querySelector('input[name="vacinas"]:checked').value
@@ -47,7 +50,7 @@ function handleFormSubmission(event) {
 // Função que lida com o envio dos dados do Pet para o backend
 function enviarDadosParaBackend(pet) {
   // Fetch API para enviar os dados para a URL
-  fetch(`/petspot/pets/${data.id}`, {
+  fetch(`https://664251513d66a67b3437020e.mockapi.io/pets`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

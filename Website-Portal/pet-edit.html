@@ -91,7 +91,11 @@
                   Altere suas preferências, ou modifique suas informações
                   pessoais.
                 </h6>
-                <a id="manage-profile" class="btn btn-outline-primary" href="user-profile.html">
+                <a
+                  id="manage-profile"
+                  class="btn btn-outline-primary"
+                  href="user-profile.html"
+                >
                   Gerenciar perfil
                 </a>
               </div>
@@ -106,7 +110,11 @@
                   Adicione ou remova seus pets da sua família, ou altere
                   informaçõespessoais e preferências do seu pet.
                 </h6>
-                <a id="manage-pets" class="btn btn-outline-primary" href="pet-list.html">
+                <a
+                  id="manage-pets"
+                  class="btn btn-outline-primary"
+                  href="pet-list.html"
+                >
                   Gerenciar Pets
                 </a>
               </div>
@@ -121,7 +129,7 @@
         <div class="container mt-5">
           <div class="row d-flex justify-content-start">
             <div class="col-lg-6">
-              <h1 class="">Cadastre seu Pet</h1>
+              <h1 class="">Editar seu Pet</h1>
               <br />
               <form>
                 <div class="row mb-3">
@@ -144,6 +152,7 @@
                       class="form-control"
                       id="data-nascimento"
                       name="dataNascimento"
+                      disabled
                     />
                   </div>
                 </div>
@@ -152,7 +161,12 @@
                     <label for="genero" class="form-label"
                       >Sexo biológico</label
                     >
-                    <select class="form-select" id="genero" name="genero">
+                    <select
+                      class="form-select"
+                      id="genero"
+                      name="genero"
+                      disabled
+                    >
                       <option value="Macho">Macho</option>
                       <option value="Fêmea">Fêmea</option>
                     </select>
@@ -165,6 +179,7 @@
                       id="especie"
                       name="especie"
                       placeholder="Cachorro"
+                      disabled
                     />
                   </div>
                   <div class="col-4">
@@ -175,18 +190,19 @@
                       id="raca"
                       name="raca"
                       placeholder="Vira-lata"
+                      disabled
                     />
                   </div>
                 </div>
                 <div class="row mb-3">
                   <div class="col-4">
-                    <label for="peso" class="form-label">Peso <small>(g)</small></label>
+                    <label for="peso" class="form-label">Peso (Em Kg)</label>
                     <input
                       type="number"
                       class="form-control"
                       id="peso"
                       name="peso"
-                      placeholder="2400"
+                      placeholder="Vira-lata"
                     />
                   </div>
                   <div class="col-4">
@@ -195,6 +211,7 @@
                       class="form-select"
                       id="comportamento"
                       name="comportamento"
+                      disabled
                     >
                       <option value="Calmo">Calmo</option>
                       <option value="Brincalhão">Brincalhão</option>
@@ -204,7 +221,12 @@
                   </div>
                   <div class="col-4">
                     <label for="porte" class="form-label">Porte</label>
-                    <select class="form-select" id="porte" name="porte">
+                    <select
+                      class="form-select"
+                      id="porte"
+                      name="porte"
+                      disabled
+                    >
                       <option value="mini">Mini</option>
                       <option value="pequeno">Pequeno</option>
                       <option value="medio">Médio</option>
@@ -222,6 +244,7 @@
                         name="castrado"
                         id="castrado-sim"
                         value="sim"
+                        disabled
                       />
                       <label class="form-check-label" for="castrado-sim">
                         Sim
@@ -234,7 +257,7 @@
                         name="castrado"
                         id="castrado-nao"
                         value="nao"
-                        checked
+                        disabled
                       />
                       <label class="form-check-label" for="castrado-nao">
                         Não
@@ -252,6 +275,7 @@
                         name="vacinas"
                         id="vacinas-sim"
                         value="sim"
+                        disabled
                       />
                       <label class="form-check-label" for="vacinas-sim">
                         Sim
@@ -264,21 +288,34 @@
                         name="vacinas"
                         id="vacinas-nao"
                         value="nao"
-                        checked
+                        disabled
                       />
                       <label class="form-check-label" for="vacinas-nao">
                         Não
                       </label>
                     </div>
                   </div>
+                  <div class="row mb-3 py-3">
+                    <div class="col-6">
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="botao-editar"
+                      >
+                        Salvar
+                      </button>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                      <button
+                        type="button"
+                        class="btn btn-danger"
+                        id="botao-deletar"
+                      >
+                        Deletar
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <button
-                  type="submit"
-                  class="btn btn-primary"
-                  id="botao-cadastrar"
-                >
-                  Cadastrar
-                </button>
               </form>
             </div>
             <div class="col-lg-6">
@@ -292,6 +329,38 @@
         </div>
       </div>
     </main>
+    <!-- Modal de confirmação de exclusão -->
+    <div class="modal" id="confirmacaoExclusaoModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Confirmação de Exclusão</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Você tem certeza que quer deletar seu pet?</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Não
+            </button>
+            <button type="button" class="btn btn-danger" id="confirmarExclusao">
+              Sim
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -305,6 +374,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="pet-register.js"></script>
+    <script src="pet-edit.js"></script>
   </body>
 </html>
