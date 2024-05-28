@@ -107,11 +107,11 @@ body * {
 .fixed-card .card-img-top {
     height: 225px;
     width: 100%;
-    object-fit:cover;
+    object-fit: cover;
     
 }
 .pet-card {
-    width: 290px;
+    width: 100%;
 }
 
 /* card pet name */
