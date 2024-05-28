@@ -97,18 +97,21 @@ body * {
     z-index: 1;
 }
 
+/* pet list cards */
+
 .card-column {
     width: 315px;
     height: 420px;
 }
+
 .fixed-card .card-img-top {
     height: 225px;
     width: 100%;
     object-fit:cover;
+    
 }
-.add-pet-card {
-    height: 413px;
-    width: 291px;
+.pet-card {
+    width: 290px;
 }
 
 /* card pet name */
