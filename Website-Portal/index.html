@@ -79,7 +79,7 @@
       >
         <div class="offcanvas-header">
           <h4 class="offcanvas-title" id="offCanvasMinhaContaLabel">
-            Bem vindo(a) ao PetSpot!
+            Bem vindo(a) de volta!
           </h4>
           <button
             type="button"
@@ -91,26 +91,66 @@
         <div class="offcanvas-body">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Crie sua conta PetSpot</h5>
+              <h5 class="card-title">Gerencie seu perfil PetSpot</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">
-                Tenha acesso a todos os recursos do PetSpot, podendo cadastrar
-                seus pets e gerenciá-los.
+                Altere suas preferências, ou modifique suas informações
+                pessoais.
               </h6>
-              <a href="user-register.html" class="btn btn-outline-primary">
-                Registrar-se
+              <a
+                id="manage-profile"
+                class="btn btn-outline-primary"
+                href="user-profile.html"
+              >
+                Gerenciar perfil
               </a>
             </div>
           </div>
           <br />
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Entre na sua conta PetSpot</h5>
+              <h5 class="card-title">Gerencie seus Pets</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">
-                Acesse o painel administrativo da sua conta PetSpot, e gerencie
-                seus Pets.
+                Adicione ou remova seus pets da sua família, ou altere
+                informações pessoais e preferências do seu pet.
               </h6>
-              <a href="user-login.html" class="btn btn-outline-primary">
-                Conectar-se
+              <a
+                id="manage-pets"
+                class="btn btn-outline-primary"
+                href="pet-list.html"
+              >
+                Gerenciar Pets
+              </a>
+            </div>
+          </div>
+          <br />
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Adicione um Pet</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                Cadastre um pet à sua família Petspot.
+              </h6>
+              <a
+                id="add-pet"
+                class="btn btn-outline-primary"
+                href="pet-register.html"
+              >
+                Adicionar Pets
+              </a>
+            </div>
+          </div>
+          <br />
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Sair da sua conta</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                Saia da sua conta PetSpot, conecte-se em outra conta, ou crie outra conta.
+              </h6>
+              <a
+                id="add-pet"
+                class="btn btn-outline-primary"
+                href="user-login.html"
+              >
+                Desconectar
               </a>
             </div>
           </div>
@@ -131,6 +171,17 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="./user-register.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const userId = sessionStorage.getItem("userId");
+        if (userId) {
+          document.getElementById("manage-profile").href += `/${userId}`;
+          document.getElementById("manage-pets").href += `/meuspets/${userId}`;
+          document.getElementById("add-pet").href += `/pet-register/${userId}`;
+        } else {
+          console.error("User ID not found in sessionStorage");
+        }
+      });
+    </script>
   </body>
 </html>
