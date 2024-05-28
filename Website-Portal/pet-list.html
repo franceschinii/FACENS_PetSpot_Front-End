@@ -10,8 +10,8 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="custom.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -102,7 +102,6 @@
                   pessoais.
                 </h6>
                 <a
-                  id="manage-profile"
                   class="btn btn-outline-primary"
                   href="user-profile.html"
                 >
@@ -120,7 +119,6 @@
                   Cadastre um pet à sua família Petspot.
                 </h6>
                 <a
-                  id="add-pet"
                   class="btn btn-outline-primary"
                   href="pet-register.html"
                 >
@@ -139,7 +137,7 @@
           <!-- Card 1 -->
           <!-- Botão "Cadastrar Outro Pet" -->
           <div class="col-md-3 position-relative card-column">
-            <div class="position-absolute modal-icon-div" id="botao-modal">
+            <div class="position-absolute modal-icon-div">
               <a type="button" data-bs-toggle="modal" data-bs-target="#modal1">
                 <ion-icon
                   name="ellipsis-horizontal"
@@ -151,26 +149,21 @@
               <img
                 src="https://png.pngtree.com/element_our/20200610/ourmid/pngtree-cat-default-avatar-image_2246581.jpg"
                 class="card-img-top"
-                alt="..."
+                alt="Imagem do Pet"
               />
               <div class="card-body">
-                <div class="row-md-12">
-                  <h5 class="text-center" id="nome">Cadastrar um pet</h5>
-                </div>
-                <div class="row">
-                  <div class="col d-flex justify-content-center mt-3">
-                    <a
-                      id="add-pet"
-                      href="pet-register.html"
-                      type="button"
-                      class="btn btn-primary d-flex justify-content-center align-items-center"
-                    >
-                      <ion-icon
-                        class="add-pet-icon"
-                        name="add-outline"
-                      ></ion-icon>
-                    </a>
-                  </div>
+                <h5 class="text-center">Cadastrar um pet</h5>
+                <div class="d-flex justify-content-center mt-3">
+                  <a
+                    href="pet-register.html"
+                    type="button"
+                    class="btn btn-primary d-flex justify-content-center align-items-center"
+                  >
+                    <ion-icon
+                      class="add-pet-icon"
+                      name="add-outline"
+                    ></ion-icon>
+                  </a>
                 </div>
               </div>
             </div>
@@ -189,7 +182,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="nome">Maggie</h1>
+            <h1 class="modal-title fs-5">Maggie</h1>
             <button
               type="button"
               class="btn-close"
@@ -200,20 +193,20 @@
           <div class="modal-body">
             <ul class="list-group">
               <li class="list-group-item">
-                Data de Nascimento: <b id="data-nascimento">23/12/2014</b>
+                Data de Nascimento: <b>23/12/2014</b>
               </li>
-              <li class="list-group-item">Sexo: <b id="sexo">Fêmea</b></li>
+              <li class="list-group-item">Sexo: <b>Fêmea</b></li>
               <li class="list-group-item">
-                Comportamento: <b id="comportamento">Arisco</b>
+                Comportamento: <b>Arisco</b>
               </li>
-              <li class="list-group-item">Espécie: <b id="especie">Gato</b></li>
-              <li class="list-group-item">Raça: <b id="raca">Vira-Lata</b></li>
-              <li class="list-group-item">Peso: <b id="peso">600</b></li>
-              <li class="list-group-item">Porte: <b id="porte">Pequeno</b></li>
+              <li class="list-group-item">Espécie: <b>Gato</b></li>
+              <li class="list-group-item">Raça: <b>Vira-Lata</b></li>
+              <li class="list-group-item">Peso: <b>600g</b></li>
+              <li class="list-group-item">Porte: <b>Pequeno</b></li>
               <li class="list-group-item">
-                Castrado: <b id="castrado">Sim</b>
+                Castrado: <b>Sim</b>
               </li>
-              <li class="list-group-item">Vacinado: <b id="vacinas">Não</b></li>
+              <li class="list-group-item">Vacinado: <b>Não</b></li>
             </ul>
           </div>
           <div class="modal-footer">
@@ -260,9 +253,9 @@
             <h3>Você quer editar os dados do seu pet?</h3>
           </div>
           <div class="modal-footer">
-            <a href="pet-edit.html" type="button" class="btn btn-secondary"
-              >Sim</a
-            >
+            <a href="pet-edit.html" type="button" class="btn btn-secondary">
+              Sim
+            </a>
             <button
               type="button"
               class="btn btn-primary"
