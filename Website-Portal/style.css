@@ -110,6 +110,13 @@ body * {
     height: 413px;
     width: 291px;
 }
+
+/* card pet name */
+
+h5.text-center {
+    margin-bottom: 0px !important;
+}
+
 /* media queries */
 @media  (min-width: 700px) {
     :root {
