@@ -119,8 +119,8 @@ class Usuario {
       // Lidar com os dados retornados pelo backend
       .then((data) => {
         console.log("Dados enviados com sucesso:", data);
-        // Redirecionar o usuário para a página index-logged.html com o ID do usuário
-        window.location.href = `index-logged.html/${data.id}`;
+        // Redirecionar o usuário para a página index.html com o ID do usuário
+        window.location.href = `index.html/${data.id}`;
       })
       .catch((error) => {
         console.error("Erro:", error);

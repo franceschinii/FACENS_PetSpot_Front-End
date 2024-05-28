@@ -14,7 +14,7 @@ document.getElementById("login-form").addEventListener("submit", async function 
 
     if (response.ok) {
       const data = await response.json();
-      window.location.href = `index-logged.html/${data.id}`;
+      window.location.href = `index.html/${data.id}`;
     } else {
       // Handle error
       console.error("Erro ao fazer login");

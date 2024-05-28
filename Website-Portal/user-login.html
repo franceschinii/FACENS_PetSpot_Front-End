@@ -24,7 +24,7 @@
       <!-- Início da seção da navbar -->
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="user-login.html">
             <img
               src="\IDV\Logotipo\PetSpot-PNG.png"
               alt="PetSpot"
@@ -106,53 +106,54 @@
       <!-- Final da seção da navbar -->
     </header>
     <div class="container">
-      <div class="row d-flex justify-content-center align-items-center py-5">
-        <div class="col-4">
-          <form class="row g-4 justify-content-start" id="login-form">
-            <div class="col-sm-12">
-              <label for="email" class="form-label">Email</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="anrrypetrin@petspot.com"
-              />
-            </div>
-            <div class="col-sm-12">
-              <label for="senha" class="form-label">Senha</label>
-              <input
-                type="password"
-                class="form-control"
-                id="senha"
-                placeholder="*********"
-              />
-            </div>
-            <div class="col-sm-12">
-              <div class="form-check">
+      <div class="row d-flex justify-content-center py-5">
+          <div class="col-4 shadow">
+            <form class="row m-4 g-4 justify-content-start" id="login-form">
+              <h1>Conectar-se</h1>
+              <div class="col-sm-12">
+                <label for="email" class="form-label">Email</label>
                 <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="termos-check"
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="anrrypetrin@petspot.com"
                 />
-                <label class="form-check-label" for="termos-check">
-                  Mantenha me conectado
-                </label>
               </div>
-            </div>
-            <div class="col-sm-12 d-flex justify-content-between">
-              <a class="py-2" href="forgot-password.html"
-                >Esqueci minha senha</a
-              >
-              <button
-                type="submit"
-                class="btn btn-primary"
-                id="botao-cadastrar"
-              >
-                Entrar
-              </button>
-            </div>
-          </form>
-        </div>
+              <div class="col-sm-12">
+                <label for="senha" class="form-label">Senha</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="senha"
+                  placeholder="*********"
+                />
+              </div>
+              <div class="col-sm-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="termos-check"
+                  />
+                  <label class="form-check-label" for="termos-check">
+                    Mantenha me conectado
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-12 d-flex justify-content-between">
+                <a class="py-2" href="forgot-password.html"
+                  >Esqueci minha senha</a
+                >
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  id="botao-cadastrar"
+                >
+                  Entrar
+                </button>
+              </div>
+            </form>
+          </div>
       </div>
     </div>
     <script
