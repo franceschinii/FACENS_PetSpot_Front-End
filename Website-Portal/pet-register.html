@@ -126,294 +126,157 @@
       <!-- Final da seção da navbar -->
     </header>
     <main>
-      <div class="row vh-100 d-flex align-items-center justify-content-center">
-        <div class="col"></div>
-        <div class="col">
-          <form class="row g-3">
-            <div class="col-md-5">
-              <label for="nome" class="form-label">Nome</label>
-              <input
-                type="text"
-                class="form-control"
-                id="nome"
-                placeholder="Anrry"
-                aria-label="Anrry"
-              />
-            </div>
-            <div class="col-md-7">
-              <label for="sobrenome" class="form-label">Sobrenome</label>
-              <input
-                type="text"
-                class="form-control"
-                id="sobrenome"
-                placeholder="Petrin"
-                aria-label="Petrin"
-              />
-            </div>
-            <div class="col-7">
-              <label for="email" class="form-label">Email</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="anrrypetrin@petspot.com"
-              />
-            </div>
-            <div class="col-5">
-              <label for="usuario" class="form-label">Nome de Usuário</label>
-              <input
-                type="text"
-                class="form-control"
-                id="usuario"
-                placeholder="anrrypetrin.ps"
-              />
-            </div>
-            <div class="col-md-6">
-              <label for="senha" class="form-label">Senha</label>
-              <input
-                type="password"
-                class="form-control"
-                id="senha"
-                placeholder="*********"
-              />
-            </div>
-            <div class="col-md-6">
-              <label for="repetir-senha" class="form-label"
-                >Repita sua senha</label
-              >
-              <input
-                type="password"
-                class="form-control"
-                id="repetir-senha"
-                placeholder="*********"
-              />
-            </div>
-            <div id="passwordHelpBlock" class="form-text">
-              Sua senha deve ter no mínimo 8 caracteres, incluindo uma letra
-              maiúscula, uma minúscula, um número e 1 caractere especial.
-            </div>
-            <div class="d-inline-flex">
-              <div class="col-md-4 me-auto">
-                <label for="data-nascimento" class="form-label"
-                  >Data de nascimento</label
-                >
-                <input type="date" class="form-control" id="data-nascimento" />
+      <div class="container">
+        <div
+          class="row vh-100 d-flex align-items-center justify-content-center"
+        >
+          <div class="col">
+            <h1>Cadastre seu Pet</h1>
+            <br />
+            <form class="row g-3">
+              <div class="col-8">
+                <label for="nome" class="form-label">Nome do Pet</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nome"
+                  name="nome"
+                  placeholder="Mica"
+                />
               </div>
-              <div class="col-md-2 mx-3">
-                <label for="pais" class="form-label">País</label>
-                <select id="pais" class="form-select">
-                  <option selected>(+55)</option>
-                  <option>...</option>
+              <div class="col-4">
+                <label for="data-nascimento" class="form-label"
+                  >Data de Nascimento</label
+                >
+                <input
+                  type="date"
+                  class="form-control"
+                  id="data-nascimento"
+                  name="dataNascimento"
+                />
+              </div>
+
+              <div class="col-4">
+                <label for="genero" class="form-label">Sexo biológico</label>
+                <select class="form-select" id="genero" name="genero">
+                  <option value="Macho">Macho</option>
+                  <option value="Fêmea">Fêmea</option>
                 </select>
               </div>
-              <div class="col-md-4">
-                <label for="telefone" class="form-label">Telefone</label>
+              <div class="col-4">
+                <label for="raca" class="form-label">Espécie</label>
                 <input
-                  type="tel"
+                  type="text"
                   class="form-control"
-                  id="telefone"
-                  placeholder="(12) 34567-8910"
+                  id="especie"
+                  name="especie"
+                  placeholder="Cachorro"
                 />
               </div>
-            </div>
-            <div class="col-md-8 py-4">
-              <div class="form-check">
+              <div class="col-4">
+                <label for="raca" class="form-label">Raça</label>
                 <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="newsletter-check"
+                  type="text"
+                  class="form-control"
+                  id="raca"
+                  name="raca"
+                  placeholder="Vira-lata"
                 />
-                <label class="form-check-label" for="newsletter-check">
-                  Eu quero receber comunicações sobre conteúdo e novidades do
-                  PetSpot por e-mail e notificação.
-                </label>
               </div>
-              <div class="form-check">
+
+              <div class="col-4">
+                <label for="peso" class="form-label"
+                  >Peso <small>(g)</small></label
+                >
                 <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="termos-check"
+                  type="number"
+                  class="form-control"
+                  id="peso"
+                  name="peso"
+                  placeholder="2400"
                 />
-                <label class="form-check-label" for="termos-check">
-                  Concordo com os
-                  <a href="#" style="text-decoration: none">Termos de Uso</a>
-                  do PetSpot.
-                </label>
               </div>
-            </div>
-            <div
-              class="col-md-4 py-4 d-flex justify-content-end align-items-center"
-            >
-              <button
-                type="submit"
-                class="btn btn-primary"
-                id="botao-cadastrar"
-              >
-                Cadastrar-se
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <!--
-      <div class="container">
-      <div class="row vh-100 d-flex align-items-center justify-content-center">
-        <div class="col">
-          
-        </div>
-        <div class="col">
-              <h1 class="">Cadastre seu Pet</h1>
-              <form class="row mb-3">
-                  <div class="col-6">
-                  <div class="col-8">
-                    <label for="nome" class="form-label">Nome do Pet</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="nome"
-                      name="nome"
-                      placeholder="Mica"
-                    />
-                  </div>
-                  <div class="col-4">
-                    <label for="data-nascimento" class="form-label"
-                      >Data de Nascimento</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="data-nascimento"
-                      name="dataNascimento"
-                    />
-                  </div>
-                
-                <div class="row mb-3">
-                  <div class="col-4">
-                    <label for="genero" class="form-label"
-                      >Sexo biológico</label
-                    >
-                    <select class="form-select" id="genero" name="genero">
-                      <option value="Macho">Macho</option>
-                      <option value="Fêmea">Fêmea</option>
-                    </select>
-                  </div>
-                  <div class="col-4">
-                    <label for="raca" class="form-label">Espécie</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="especie"
-                      name="especie"
-                      placeholder="Cachorro"
-                    />
-                  </div>
-                  <div class="col-4">
-                    <label for="raca" class="form-label">Raça</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="raca"
-                      name="raca"
-                      placeholder="Vira-lata"
-                    />
-                  </div>
+              <div class="col-4">
+                <label for="genero" class="form-label">Comportamento</label>
+                <select
+                  class="form-select"
+                  id="comportamento"
+                  name="comportamento"
+                >
+                  <option value="Calmo">Calmo</option>
+                  <option value="Brincalhão">Brincalhão</option>
+                  <option value="Arisco">Arisco</option>
+                  <option value="Agressivo">Agressivo</option>
+                </select>
+              </div>
+              <div class="col-4">
+                <label for="porte" class="form-label">Porte</label>
+                <select class="form-select" id="porte" name="porte">
+                  <option value="mini">Mini</option>
+                  <option value="pequeno">Pequeno</option>
+                  <option value="medio">Médio</option>
+                  <option value="grande">Grande</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label class="form-check-label">Castrado?</label>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="castrado"
+                    id="castrado-sim"
+                    value="sim"
+                  />
+                  <label class="form-check-label" for="castrado-sim">
+                    Sim
+                  </label>
                 </div>
-                <div class="row mb-3">
-                  <div class="col-4">
-                    <label for="peso" class="form-label"
-                      >Peso <small>(g)</small></label
-                    >
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="peso"
-                      name="peso"
-                      placeholder="2400"
-                    />
-                  </div>
-                  <div class="col-4">
-                    <label for="genero" class="form-label">Comportamento</label>
-                    <select
-                      class="form-select"
-                      id="comportamento"
-                      name="comportamento"
-                    >
-                      <option value="Calmo">Calmo</option>
-                      <option value="Brincalhão">Brincalhão</option>
-                      <option value="Arisco">Arisco</option>
-                      <option value="Agressivo">Agressivo</option>
-                    </select>
-                  </div>
-                  <div class="col-4">
-                    <label for="porte" class="form-label">Porte</label>
-                    <select class="form-select" id="porte" name="porte">
-                      <option value="mini">Mini</option>
-                      <option value="pequeno">Pequeno</option>
-                      <option value="medio">Médio</option>
-                      <option value="grande">Grande</option>
-                    </select>
-                  </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="castrado"
+                    id="castrado-nao"
+                    value="nao"
+                    checked
+                  />
+                  <label class="form-check-label" for="castrado-nao">
+                    Não
+                  </label>
                 </div>
-                <div class="row mb-3">
-                  <div class="col-6">
-                    <label class="form-check-label">Castrado?</label>
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="castrado"
-                        id="castrado-sim"
-                        value="sim"
-                      />
-                      <label class="form-check-label" for="castrado-sim">
-                        Sim
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="castrado"
-                        id="castrado-nao"
-                        value="nao"
-                        checked
-                      />
-                      <label class="form-check-label" for="castrado-nao">
-                        Não
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <label class="form-check-label"
-                      >Tomou as principais vacinas?</label
-                    >
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="vacinas"
-                        id="vacinas-sim"
-                        value="sim"
-                      />
-                      <label class="form-check-label" for="vacinas-sim">
-                        Sim
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="vacinas"
-                        id="vacinas-nao"
-                        value="nao"
-                        checked
-                      />
-                      <label class="form-check-label" for="vacinas-nao">
-                        Não
-                      </label>
-                    </div>
-                  </div>
+              </div>
+              <div class="col-6">
+                <label class="form-check-label"
+                  >Tomou as principais vacinas?</label
+                >
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="vacinas"
+                    id="vacinas-sim"
+                    value="sim"
+                  />
+                  <label class="form-check-label" for="vacinas-sim">
+                    Sim
+                  </label>
                 </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="vacinas"
+                    id="vacinas-nao"
+                    value="nao"
+                    checked
+                  />
+                  <label class="form-check-label" for="vacinas-nao">
+                    Não
+                  </label>
+                </div>
+              </div>
+              <div class="col-4">
                 <button
                   type="submit"
                   class="btn btn-primary"
@@ -421,12 +284,12 @@
                 >
                   Cadastrar
                 </button>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
+          <div class="col"></div>
         </div>
       </div>
-       -->
     </main>
     <script
       type="module"
