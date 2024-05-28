@@ -49,6 +49,11 @@
             </ul>
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item d-flex">
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Procure seu pet:" aria-label="Search">
+                </form>
+              </li>
+              <li class="nav-item d-flex">
                 <a
                   class="nav-icon"
                   data-bs-toggle="offcanvas"
@@ -277,18 +282,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const userId = sessionStorage.getItem("userId");
-        if (userId) {
-          document.getElementById("manage-profile").href += `/${userId}`;
-          document.getElementById("manage-pets").href += `/meuspets/${userId}`;
-          document.getElementById("add-pet").href += `/pet-register/${userId}`;
-        } else {
-          console.error("User ID not found in sessionStorage");
-        }
-      });
-    </script>
     <script src="pet-list.js"></script>
   </body>
 </html>

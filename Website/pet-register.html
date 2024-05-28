@@ -179,7 +179,17 @@
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <div class="col-6">
+                  <div class="col-4">
+                    <label for="peso" class="form-label">Peso <small>(g)</small></label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="peso"
+                      name="peso"
+                      placeholder="2400"
+                    />
+                  </div>
+                  <div class="col-4">
                     <label for="genero" class="form-label">Comportamento</label>
                     <select
                       class="form-select"
@@ -192,7 +202,7 @@
                       <option value="Agressivo">Agressivo</option>
                     </select>
                   </div>
-                  <div class="col-6">
+                  <div class="col-4">
                     <label for="porte" class="form-label">Porte</label>
                     <select class="form-select" id="porte" name="porte">
                       <option value="mini">Mini</option>
@@ -295,18 +305,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const userId = sessionStorage.getItem("userId");
-        if (userId) {
-          document.getElementById("manage-profile").href += `/${userId}`;
-          document.getElementById("manage-pets").href += `/meuspets/${userId}`;
-          document.getElementById("add-pet").href += `/pet-register/${userId}`;
-        } else {
-          console.error("User ID not found in sessionStorage");
-        }
-      });
-    </script>
     <script src="pet-register.js"></script>
   </body>
 </html>
