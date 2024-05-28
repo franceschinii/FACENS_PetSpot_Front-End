@@ -146,14 +146,6 @@
           <!-- Card 1 -->
           <!-- Botão "Cadastrar Outro Pet" -->
           <div class="col-md-3 position-relative card-column">
-            <div class="position-absolute modal-icon-div">
-              <a type="button" data-bs-toggle="modal" data-bs-target="#modal1">
-                <ion-icon
-                  name="ellipsis-horizontal"
-                  class="modal-icon"
-                ></ion-icon>
-              </a>
-            </div>
             <div class="card fixed-card pet-card">
               <img
                 src="https://www.svgrepo.com/show/452956/dog-head-profile.svg"
@@ -184,7 +176,45 @@
         </div>
       </div>
     </main>
-    <!-- Modal 1 -->
+    <!-- Modal 2-->
+    <div
+      class="modal fade"
+      id="modal2"
+      tabindex="-1"
+      aria-labelledby="modal2"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h3>Você quer editar os dados do seu pet?</h3>
+          </div>
+          <div class="modal-footer">
+            <a href="pet-edit.html" type="button" class="btn btn-secondary">
+              Sim
+            </a>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Não
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal 2-->
+
+    <!-- Modal em desuso 
     <div
       class="modal fade"
       id="modal1"
@@ -237,46 +267,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <!-- /Modal 1-->
-
-    <!-- Modal 2-->
-    <div
-      class="modal fade"
-      id="modal2"
-      tabindex="-1"
-      aria-labelledby="modal2"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <h3>Você quer editar os dados do seu pet?</h3>
-          </div>
-          <div class="modal-footer">
-            <a href="pet-edit.html" type="button" class="btn btn-secondary">
-              Sim
-            </a>
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-dismiss="modal"
-            >
-              Não
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /Modal 2-->
+    </div>  /
+    -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
