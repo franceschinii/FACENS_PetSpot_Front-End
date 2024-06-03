@@ -85,8 +85,7 @@ body * {
 .modal-icon {
     font-size: 2.5rem;
     z-index: 1;
-    color: rgba(0,0,0,0.2);
-    fill: white;
+    fill: black;
 }
 .add-pet-icon {
     font-size: 4rem;
@@ -121,6 +120,25 @@ h5.text-center {
 }
 
 /* media queries */
+
+@media (max-width: 767.98px) {
+      .navbar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1030;
+      }
+    }
+
 @media  (min-width: 700px) {
     :root {
         --bg-url: url();

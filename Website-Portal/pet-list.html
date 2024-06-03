@@ -93,32 +93,45 @@
           ></button>
         </div>
         <div class="offcanvas-body">
-          <div>
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Gerencie seu perfil PetSpot</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">
-                  Altere suas preferências, ou modifique suas informações
-                  pessoais.
-                </h6>
-                <a class="btn btn-outline-primary" href="user-profile.html">
-                  Gerenciar perfil
-                </a>
-              </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Gerencie seu perfil PetSpot</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                Altere suas preferências, ou modifique suas informações
+                pessoais.
+              </h6>
+              <a class="btn btn-outline-primary" href="user-profile.html">
+                Gerenciar perfil
+              </a>
             </div>
           </div>
           <br />
-          <div>
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Adicione um Pet</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">
-                  Cadastre um pet à sua família Petspot.
-                </h6>
-                <a class="btn btn-outline-primary" href="pet-register.html">
-                  Adicionar Pets
-                </a>
-              </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Adicione um Pet</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                Cadastre um pet à sua família Petspot.
+              </h6>
+              <a class="btn btn-outline-primary" href="pet-register.html">
+                Adicionar Pets
+              </a>
+            </div>
+          </div>
+          <br />
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Sair da sua conta</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                Saia da sua conta PetSpot, conecte-se em outra conta, ou crie
+                outra conta.
+              </h6>
+              <a
+                id="add-pet"
+                class="btn btn-outline-primary"
+                href="user-login.html"
+              >
+                Desconectar
+              </a>
             </div>
           </div>
         </div>
@@ -133,14 +146,6 @@
           <!-- Card 1 -->
           <!-- Botão "Cadastrar Outro Pet" -->
           <div class="col-md-3 position-relative card-column">
-            <div class="position-absolute modal-icon-div">
-              <a type="button" data-bs-toggle="modal" data-bs-target="#modal1">
-                <ion-icon
-                  name="ellipsis-horizontal"
-                  class="modal-icon"
-                ></ion-icon>
-              </a>
-            </div>
             <div class="card fixed-card pet-card">
               <img
                 src="https://www.svgrepo.com/show/452956/dog-head-profile.svg"
@@ -148,18 +153,20 @@
                 alt="Imagem do Pet"
               />
               <div class="card-body">
-                <h5 class="text-center">Adicionar novo Pet</h5> 
+                <h5 class="text-center">Adicionar novo Pet</h5>
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-unstyled">
-                  <div class="d-flex justify-content-center m-3">                
+                  <div class="d-flex justify-content-center m-3">
                     <a
                       href="pet-register.html"
                       type="button"
-                      class="btn btn-primary d-flex justify-content-center fs-2"
+                      class="btn btn-primary d-flex fs-2"
                     >
-                      
-                      <ion-icon class="align-text-top g-3" name="paw"></ion-icon>
+                      <ion-icon
+                        class="align-text-top g-3"
+                        name="paw"
+                      ></ion-icon>
                     </a>
                   </div>
                 </li>
@@ -169,7 +176,45 @@
         </div>
       </div>
     </main>
-    <!-- Modal 1 -->
+    <!-- Modal 2-->
+    <div
+      class="modal fade"
+      id="modal2"
+      tabindex="-1"
+      aria-labelledby="modal2"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h3>Você quer editar os dados do seu pet?</h3>
+          </div>
+          <div class="modal-footer">
+            <a href="pet-edit.html" type="button" class="btn btn-secondary">
+              Sim
+            </a>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Não
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal 2-->
+
+    <!-- Modal em desuso 
     <div
       class="modal fade"
       id="modal1"
@@ -222,46 +267,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <!-- /Modal 1-->
-
-    <!-- Modal 2-->
-    <div
-      class="modal fade"
-      id="modal2"
-      tabindex="-1"
-      aria-labelledby="modal2"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <h3>Você quer editar os dados do seu pet?</h3>
-          </div>
-          <div class="modal-footer">
-            <a href="pet-edit.html" type="button" class="btn btn-secondary">
-              Sim
-            </a>
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-dismiss="modal"
-            >
-              Não
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /Modal 2-->
+    </div>  /
+    -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
