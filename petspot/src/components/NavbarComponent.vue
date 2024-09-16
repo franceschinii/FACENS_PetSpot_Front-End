@@ -1,16 +1,41 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// Função para fechar qualquer offcanvas aberto e remover o backdrop manualmente
+const closeOffcanvas = () => {
+  // Seleciona todos os offcanvas abertos
+  const offcanvasElements = document.querySelectorAll('.offcanvas.show');
+  offcanvasElements.forEach((element: any) => {
+    const offcanvasInstance = bootstrap.Offcanvas.getInstance(element);
+    if (offcanvasInstance) {
+      offcanvasInstance.hide(); // Fecha o offcanvas
+    }
+  });
+
+  // Cria um listener para o evento de fechamento e remove após ser disparado
+  const handleOffcanvasHidden = () => {
+    const backdrop = document.querySelector('.offcanvas-backdrop');
+    if (backdrop) {
+      backdrop.remove(); // Remove o fundo escuro (overlay) manualmente
+    }
+    document.body.classList.remove('offcanvas-open'); // Remove a classe que desativa o scroll
+    document.removeEventListener('hidden.bs.offcanvas', handleOffcanvasHidden); // Remove o listener
+  };
+
+  // Adiciona o evento para remover o backdrop após o fechamento
+  document.addEventListener('hidden.bs.offcanvas', handleOffcanvasHidden);
+};
+</script>
 
 <template>
   <!-- Início da seção da navbar -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary top-0">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
+      <router-link class="navbar-brand" :to="{ name: 'landing-page' }">
         <img
           src="../assets/images/PetSpot-PNG.png"
           alt="PetSpot"
           class="nav-brand-icon d-inline-block align-text-top"
         />
-      </a>
+      </router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -25,16 +50,24 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#sectionOurServices">Nossos Serviços</a>
+            <router-link class="nav-link" :to="{ name: 'our-services-page' }"
+              >Nossos Serviços</router-link
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#sectionAboutUs">Sobre Nós</a>
+            <router-link class="nav-link" :to="{ name: 'about-us-page' }"
+              >Sobre Nós</router-link
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#sectionPartners">Parceiros</a>
+            <router-link class="nav-link" :to="{ name: 'our-partners-page' }"
+              >Parceiros</router-link
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#sectionContact">Fale conosco</a>
+            <router-link class="nav-link" :to="{ name: 'contact-us-page' }"
+              >Fale conosco</router-link
+            >
           </li>
         </ul>
         <ul class="navbar-nav me-auto mb-lg-0">
@@ -72,7 +105,6 @@
               data-bs-toggle="offcanvas"
               href="#offCanvasRegistrar"
               role="button"
-              aria-controls="offCanvasRegistrar"
             >
               <ion-icon name="person-circle"></ion-icon>
               <span class="nav-icon-span mx-2">Registrar-se</span>
@@ -141,10 +173,11 @@
             Tenha acesso a todos os recursos do PetSpot, podendo cadastrar seus
             pets e gerenciá-los.
           </h6>
-          <a
-            href="../Website-Portal/user-register.html"
+          <router-link
+            :to="{ name: 'register-page' }"
+            @click="closeOffcanvas"
             class="btn btn-outline-primary"
-            >Registrar-se</a
+            >Registrar-se</router-link
           >
         </div>
       </div>
@@ -156,10 +189,11 @@
             Acesse o painel administrativo da sua conta PetSpot, e gerencie seus
             Pets.
           </h6>
-          <a
-            href="../Website-Portal/user-login.html"
+          <router-link
+            :to="{ name: 'login-page' }"
+            @click="closeOffcanvas"
             class="btn btn-outline-primary"
-            >Conectar-se</a
+            >Conectar-se</router-link
           >
         </div>
       </div>
@@ -169,6 +203,8 @@
 </template>
 
 <style scoped>
+/* Navbar Components */
+
 .nav-brand-icon {
   width: auto;
   height: 30px;
@@ -190,6 +226,26 @@
 }
 
 .nav-link {
-  color: var(--text-color);
+  color: var(--text-text-color);
+}
+
+@media (max-width: 767.98px) {
+  .navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+  }
 }
 </style>

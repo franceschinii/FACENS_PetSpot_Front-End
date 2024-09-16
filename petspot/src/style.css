@@ -19,6 +19,8 @@
 :root {
   --brand-color: #3f9eff;
   --text-color: black;
+  --secondary-text-color: white;
+  --tertiary-text-color: #bcbcbc;
   --bg-url: url();
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
