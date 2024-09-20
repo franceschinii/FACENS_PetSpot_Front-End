@@ -1,10 +1,12 @@
 <script setup lang="ts">
+
 // Função para fechar qualquer offcanvas aberto e remover o backdrop manualmente
 const closeOffcanvas = () => {
   // Seleciona todos os offcanvas abertos
   const offcanvasElements = document.querySelectorAll('.offcanvas.show');
-  offcanvasElements.forEach((element: any) => {
-    const offcanvasInstance = bootstrap.Offcanvas.getInstance(element);
+
+  offcanvasElements.forEach((element) => {
+    const offcanvasInstance = (window as any).bootstrap.Offcanvas.getInstance(element as HTMLElement);
     if (offcanvasInstance) {
       offcanvasInstance.hide(); // Fecha o offcanvas
     }
@@ -27,8 +29,8 @@ const closeOffcanvas = () => {
 
 <template>
   <!-- Início da seção da navbar -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary top-0">
-    <div class="container-fluid">
+  <div class="navbar navbar-expand-lg bg-body-tertiary top-0 px-2">
+    
       <router-link class="navbar-brand" :to="{ name: 'landing-page' }">
         <img
           src="../assets/images/PetSpot-PNG.png"
@@ -47,47 +49,47 @@ const closeOffcanvas = () => {
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
+      <div class="collapse navbar-collapse navbar-collapse-lg" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto d-flex align-items-center gap-2">
+          <li class="nav-item text-nowrap">
             <router-link class="nav-link" :to="{ name: 'our-services-page' }"
               >Nossos Serviços</router-link
             >
           </li>
-          <li class="nav-item">
+          <li class="nav-item text-nowrap">
             <router-link class="nav-link" :to="{ name: 'about-us-page' }"
               >Sobre Nós</router-link
             >
           </li>
-          <li class="nav-item">
+          <li class="nav-item text-nowrap">
             <router-link class="nav-link" :to="{ name: 'our-partners-page' }"
               >Parceiros</router-link
             >
           </li>
-          <li class="nav-item">
+          <li class="nav-item text-nowrap">
             <router-link class="nav-link" :to="{ name: 'contact-us-page' }"
               >Fale conosco</router-link
             >
           </li>
         </ul>
-        <ul class="navbar-nav me-auto mb-lg-0">
-          <form class="d-flex" role="search">
+        <ul class="navbar-nav me-auto">
+          <form class="d-flex gap-2 mx-2" role="search">
             <input
-              class="form-control me-2"
+              class="form-control"
               type="search"
               placeholder="Pesquisar..."
               aria-label="Pesquisar"
             />
             <button
-              class="btn btn-outline-primary d-flex align-items-center py-0 fs-5"
+              class="btn btn-outline-primary d-flex align-items-center gap-2"
               type="submit"
             >
               <ion-icon name="search"></ion-icon>
             </button>
           </form>
         </ul>
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item d-flex px-md-3 px-0 py-md-0 py-3">
+        <ul class="navbar-nav d-flex aling-items-center gap-4">
+          <li class="nav-item d-flex gap-4">
             <a
               class="nav-icon"
               data-bs-toggle="offcanvas"
@@ -96,10 +98,10 @@ const closeOffcanvas = () => {
               aria-controls="offCanvasAjuda"
             >
               <ion-icon name="help-buoy"></ion-icon>
-              <span class="nav-icon-span mx-2">Ajuda</span>
+              <span class="nav-icon-span text-nowrap">Ajuda</span>
             </a>
           </li>
-          <li class="nav-item d-flex">
+          <li class="nav-item d-flex gap-4">
             <a
               class="nav-icon"
               data-bs-toggle="offcanvas"
@@ -107,13 +109,13 @@ const closeOffcanvas = () => {
               role="button"
             >
               <ion-icon name="person-circle"></ion-icon>
-              <span class="nav-icon-span mx-2">Registrar-se</span>
+              <span class="nav-icon-span text-nowrap">Registrar-se</span>
             </a>
           </li>
         </ul>
       </div>
+
     </div>
-  </nav>
   <div
     class="offcanvas offcanvas-end"
     tabindex="-1"
