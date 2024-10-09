@@ -12,7 +12,7 @@
   <div class="d-flex d-md-none">
     <router-link class="navbar-brand" :to="{ name: 'landing-page' }">
       <img
-        src="./../../assets/images/Logo-Pata-PNG.png"
+        src="./../../assets/images/Logo-Pata-Blue-PNG.png"
         alt="PetSpot"
         class="nav-brand-icon d-inline-block align-text-top"
       />
