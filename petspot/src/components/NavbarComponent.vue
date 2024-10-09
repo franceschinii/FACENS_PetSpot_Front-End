@@ -30,7 +30,9 @@ const closeOffcanvas = () => {
 
 <template>
   <!-- Início da seção da navbar -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary top-0 px-2">
+  <nav
+    class="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-between align-items-center gap-2 top-0 px-4"
+  >
     <router-link class="navbar-brand" :to="{ name: 'landing-page' }">
       <img
         src="../assets/images/PetSpot-PNG.png"
@@ -50,33 +52,45 @@ const closeOffcanvas = () => {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div
-      class="collapse navbar-collapse navbar-collapse-lg"
+      class="collapse navbar-collapse navbar-collapse-lg d-flex flex-md-row flex-column gap-4"
       id="navbarSupportedContent"
     >
-      <ul class="navbar-nav me-auto d-flex align-items-center gap-2">
-        <li class="nav-item text-nowrap">
-          <router-link class="nav-link" :to="{ name: 'our-services-page' }"
-            >Nossos Serviços</router-link
-          >
-        </li>
-        <li class="nav-item text-nowrap">
-          <router-link class="nav-link" :to="{ name: 'about-us-page' }"
-            >Sobre Nós</router-link
-          >
-        </li>
-        <li class="nav-item text-nowrap">
-          <router-link class="nav-link" :to="{ name: 'our-partners-page' }"
-            >Parceiros</router-link
-          >
-        </li>
-        <li class="nav-item text-nowrap">
-          <router-link class="nav-link" :to="{ name: 'contact-us-page' }"
-            >Fale conosco</router-link
-          >
-        </li>
+      <ul
+        class="navbar-nav me-md-auto d-flex align-items-center justify-content-center gap-2"
+      >
+        <div
+          class="d-flex d-md-none justify-content-between align-items-center gap-4"
+        >
+          <li class="nav-item text-nowrap">
+            <router-link class="nav-link" :to="{ name: 'our-services-page' }"
+              >Nossos Serviços</router-link
+            >
+          </li>
+          <li class="nav-item text-nowrap">
+            <router-link class="nav-link" :to="{ name: 'about-us-page' }"
+              >Sobre Nós</router-link
+            >
+          </li>
+        </div>
+        <div
+          class="d-flex d-md-none justify-content-between align-items-center gap-4"
+        >
+          <li class="nav-item text-nowrap">
+            <router-link class="nav-link" :to="{ name: 'our-partners-page' }"
+              >Parceiros</router-link
+            >
+          </li>
+          <li class="nav-item text-nowrap">
+            <router-link class="nav-link" :to="{ name: 'contact-us-page' }"
+              >Fale conosco</router-link
+            >
+          </li>
+        </div>
       </ul>
-      <ul class="navbar-nav me-auto">
-        <form class="d-flex gap-2 mx-2" role="search">
+      <ul
+        class="navbar-nav me-md-auto d-flex align-items-center justify-content-center"
+      >
+        <form class="d-flex gap-2" role="search">
           <input
             class="form-control"
             type="search"
@@ -91,10 +105,12 @@ const closeOffcanvas = () => {
           </button>
         </form>
       </ul>
-      <ul class="navbar-nav d-flex aling-items-center gap-4">
-        <li class="nav-item d-flex gap-4">
+      <ul
+        class="navbar-nav d-flex flex-row align-items-center justify-content-center gap-4"
+      >
+        <li class="nav-item">
           <a
-            class="nav-icon"
+            class="nav-icon d-flex align-content-center gap-1"
             data-bs-toggle="offcanvas"
             href="#offCanvasAjuda"
             role="button"
@@ -104,9 +120,9 @@ const closeOffcanvas = () => {
             <span class="nav-icon-span text-nowrap">Ajuda</span>
           </a>
         </li>
-        <li class="nav-item d-flex gap-4">
+        <li class="nav-item">
           <a
-            class="nav-icon"
+            class="nav-icon d-flex align-content-center gap-1"
             data-bs-toggle="offcanvas"
             href="#offCanvasRegistrar"
             role="button"
