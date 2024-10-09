@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import HeaderComponent from "../layouts/HeaderComponent.vue";
-import BodyComponent from "../layouts/BodyComponent.vue";
 </script>
 
 <template>

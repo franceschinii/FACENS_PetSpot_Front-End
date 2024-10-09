@@ -57,7 +57,7 @@ const routes = [
     path: "/sign-up",
     name: "register-page",
     component: RegisterPage,
-    beforeEnter: isAuthenticated,
+    beforeEnter: authGuard,
   },
 
   {
