@@ -137,8 +137,13 @@ const closeOffcanvas = () => {
   </div>
 </template>
 
-<style scoped>
+<style>
 /* Navbar Components */
+
+.nav-icon {
+  font-size: 2.5rem;
+  color: var(--brand-color);
+}
 
 @media (max-width: 767.98px) {
   .navbar {

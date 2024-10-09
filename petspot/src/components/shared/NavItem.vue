@@ -48,38 +48,57 @@ onBeforeUnmount(() => {
     </ul>
 
     <!-- Para telas menores, use o dropdown do Bootstrap -->
-    <div v-else class="dropdown">
-      <button
-        class="btn btn-outline-primary d-flex justify-content-center align-items-center dropdown-toggle border-2 text-primary"
-        type="button"
-        id="dropdownMenuButton"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
+    <div v-else>
+      <a
+        class="d-flex align-items-center text-decoration-none gap-1"
+        data-bs-toggle="offcanvas"
+        href="#offCanvasMenu"
+        role="button"
       >
-        Menu
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li>
-          <router-link class="dropdown-item" :to="{ name: 'our-services-page' }"
-            >Nossos Serviços</router-link
-          >
-        </li>
-        <li>
-          <router-link class="dropdown-item" :to="{ name: 'about-us-page' }"
-            >Sobre Nós</router-link
-          >
-        </li>
-        <li>
-          <router-link class="dropdown-item" :to="{ name: 'our-partners-page' }"
-            >Parceiros</router-link
-          >
-        </li>
-        <li>
-          <router-link class="dropdown-item" :to="{ name: 'contact-us-page' }"
-            >Fale conosco</router-link
-          >
-        </li>
-      </ul>
+        <ion-icon name="menu" class="nav-icon"></ion-icon>
+      </a>
+
+      <!-- Offcanvas com os itens do menu que abre da esquerda -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offCanvasMenu"
+        aria-labelledby="offCanvasMenuLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offCanvasMenuLabel">Menu</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav d-flex flex-column gap-4">
+            <li class="nav-item text-nowrap">
+              <router-link class="nav-link" :to="{ name: 'our-services-page' }"
+                >Nossos Serviços</router-link
+              >
+            </li>
+            <li class="nav-item text-nowrap">
+              <router-link class="nav-link" :to="{ name: 'about-us-page' }"
+                >Sobre Nós</router-link
+              >
+            </li>
+            <li class="nav-item text-nowrap">
+              <router-link class="nav-link" :to="{ name: 'our-partners-page' }"
+                >Parceiros</router-link
+              >
+            </li>
+            <li class="nav-item text-nowrap">
+              <router-link class="nav-link" :to="{ name: 'contact-us-page' }"
+                >Fale conosco</router-link
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </template>

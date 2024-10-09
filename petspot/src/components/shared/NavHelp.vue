@@ -31,11 +31,6 @@
   </ul>
 </template>
 <style scoped>
-.nav-icon {
-  font-size: 2.5rem;
-  color: var(--brand-color);
-}
-
 .nav-icon-span {
   font-size: 1.5rem;
   text-decoration: none;
