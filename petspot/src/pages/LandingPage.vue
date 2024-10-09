@@ -5,21 +5,19 @@ import BodyComponent from "../layouts/BodyComponent.vue";
 
 <template>
   <HeaderComponent />
-  <section class="hero bg-light p-5">
+  <section class="p-5">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <h1>Taking care for your Smart Dog!</h1>
-          <p>
-            Human–canine bonding is the relationship between dogs and humans.
-          </p>
-          <a href="#" class="btn btn-primary">Explore More</a>
+      <div class="row d-flex justify-content-between align-items-center">
+        <div class="col-6 col-md-6 bg-light p-5 rounded-5">
+          <h1>Um lugar para cuidar do seu Pet!</h1>
+          <p>A plataforma inteligente, criada com amor para o seu pet.</p>
+          <a href="#" class="btn btn-primary">Conheça mais</a>
         </div>
-        <div class="col-md-6">
-          <div class="card bg-warning p-4" style="border-radius: 50%">
+        <div class="col-6 col-md-6 d-flex justify-center align-items-center">
+          <div class="card bg-info p-4 rounded rounded-circle w-75 h-75">
             <img
-              src="dog-image.jpg"
-              alt="Dog with glasses"
+              src="../assets/images/Cachorro-PNG-1.png"
+              alt="Cachorro feliz"
               class="img-fluid rounded-circle"
             />
           </div>

@@ -52,15 +52,13 @@ const closeOffcanvas = () => {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div
-      class="collapse navbar-collapse navbar-collapse-lg d-flex flex-md-row flex-column gap-4"
+      class="collapse navbar-collapse navbar-collapse-lg"
       id="navbarSupportedContent"
     >
       <ul
-        class="navbar-nav me-md-auto d-flex align-items-center justify-content-center gap-2"
+        class="navbar-nav me-lg-auto d-flex align-items-center justify-content-center gap-2"
       >
-        <div
-          class="d-flex d-md-none justify-content-between align-items-center gap-4"
-        >
+        <div class="d-flex justify-content-between align-items-center gap-4">
           <li class="nav-item text-nowrap">
             <router-link class="nav-link" :to="{ name: 'our-services-page' }"
               >Nossos Serviços</router-link
@@ -72,9 +70,7 @@ const closeOffcanvas = () => {
             >
           </li>
         </div>
-        <div
-          class="d-flex d-md-none justify-content-between align-items-center gap-4"
-        >
+        <div class="d-flex justify-content-between align-items-center gap-4">
           <li class="nav-item text-nowrap">
             <router-link class="nav-link" :to="{ name: 'our-partners-page' }"
               >Parceiros</router-link
@@ -88,7 +84,7 @@ const closeOffcanvas = () => {
         </div>
       </ul>
       <ul
-        class="navbar-nav me-md-auto d-flex align-items-center justify-content-center"
+        class="navbar-nav me-lg-auto d-md-none d-lg-flex d-flex align-items-center justify-content-center"
       >
         <form class="d-flex gap-2" role="search">
           <input
