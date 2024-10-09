@@ -49,24 +49,24 @@ const closeOffcanvas = () => {
     >
       <li class="nav-item p-2">
         <a
-          class="nav-icon d-flex align-content-center gap-1"
+          class="d-flex align-items-center text-decoration-none gap-1"
           data-bs-toggle="offcanvas"
           href="#offCanvasAjuda"
           role="button"
           aria-controls="offCanvasAjuda"
         >
-          <ion-icon name="help-buoy"></ion-icon>
+          <ion-icon name="help-buoy" class="nav-icon"></ion-icon>
           <span class="nav-icon-span text-nowrap d-none d-md-block">Ajuda</span>
         </a>
       </li>
       <li class="nav-item p-2">
         <a
-          class="nav-icon d-flex align-content-center gap-1"
+          class="d-flex align-items-center text-decoration-none gap-1"
           data-bs-toggle="offcanvas"
           href="#offCanvasRegistrar"
           role="button"
         >
-          <ion-icon name="person-circle"></ion-icon>
+          <ion-icon name="person-circle" class="nav-icon"></ion-icon>
           <span class="nav-icon-span text-nowrap d-none d-md-block"
             >Registrar-se</span
           >
@@ -169,18 +169,14 @@ const closeOffcanvas = () => {
 /* Navbar Components */
 
 .nav-icon {
-  font-size: 30px;
-  display: flex;
-  align-items: center;
+  font-size: 2.5rem;
   color: var(--brand-color);
-  text-decoration: none;
 }
 
 .nav-icon-span {
-  display: flex;
-  align-items: center;
+  font-size: 1.5rem;
+  text-decoration: none;
   color: var(--brand-color);
-  font-size: 20px;
 }
 
 @media (max-width: 767.98px) {
