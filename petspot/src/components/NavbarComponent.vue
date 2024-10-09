@@ -31,7 +31,7 @@ const closeOffcanvas = () => {
 <template>
   <!-- Início da seção da navbar -->
   <nav
-    class="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-between align-items-center gap-2 top-0 px-4"
+    class="navbar bg-body-tertiary d-flex justify-content-between align-items-center gap-2 top-0 px-4"
   >
     <router-link class="navbar-brand" :to="{ name: 'landing-page' }">
       <img
@@ -40,95 +40,85 @@ const closeOffcanvas = () => {
         class="nav-brand-icon d-inline-block align-text-top"
       />
     </router-link>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
+    <ul
+      class="navbar-nav me-lg-auto ms-lg-auto d-flex flex-row align-items-between justify-content-center gap-4"
     >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div
-      class="collapse navbar-collapse navbar-collapse-lg"
-      id="navbarSupportedContent"
+      <li class="nav-item text-nowrap">
+        <router-link class="nav-link" :to="{ name: 'our-services-page' }"
+          >Nossos Serviços</router-link
+        >
+      </li>
+      <li class="nav-item text-nowrap">
+        <router-link class="nav-link" :to="{ name: 'about-us-page' }"
+          >Sobre Nós</router-link
+        >
+      </li>
+
+      <li class="nav-item text-nowrap">
+        <router-link class="nav-link" :to="{ name: 'our-partners-page' }"
+          >Parceiros</router-link
+        >
+      </li>
+      <li class="nav-item text-nowrap">
+        <router-link class="nav-link" :to="{ name: 'contact-us-page' }"
+          >Fale conosco</router-link
+        >
+      </li>
+    </ul>
+    <ul
+      class="navbar-nav me-lg-auto ms-lg-auto d-md-none d-lg-flex align-items-center justify-content-center"
     >
-      <ul
-        class="navbar-nav me-lg-auto d-flex align-items-center justify-content-center gap-2"
-      >
-        <div class="d-flex justify-content-between align-items-center gap-4">
-          <li class="nav-item text-nowrap">
-            <router-link class="nav-link" :to="{ name: 'our-services-page' }"
-              >Nossos Serviços</router-link
-            >
-          </li>
-          <li class="nav-item text-nowrap">
-            <router-link class="nav-link" :to="{ name: 'about-us-page' }"
-              >Sobre Nós</router-link
-            >
-          </li>
-        </div>
-        <div class="d-flex justify-content-between align-items-center gap-4">
-          <li class="nav-item text-nowrap">
-            <router-link class="nav-link" :to="{ name: 'our-partners-page' }"
-              >Parceiros</router-link
-            >
-          </li>
-          <li class="nav-item text-nowrap">
-            <router-link class="nav-link" :to="{ name: 'contact-us-page' }"
-              >Fale conosco</router-link
-            >
-          </li>
-        </div>
-      </ul>
-      <ul
-        class="navbar-nav me-lg-auto d-md-none d-lg-flex d-flex align-items-center justify-content-center"
-      >
-        <form class="d-flex gap-2" role="search">
-          <input
-            class="form-control"
-            type="search"
-            placeholder="Pesquisar..."
-            aria-label="Pesquisar"
-          />
-          <button
-            class="btn btn-outline-primary d-flex align-items-center gap-2"
-            type="submit"
+      <form class="d-flex gap-2" role="search">
+        <input
+          class="form-control"
+          type="search"
+          placeholder="Pesquisar..."
+          aria-label="Pesquisar"
+        />
+        <button
+          class="btn btn-outline-primary d-flex align-items-center gap-2"
+          type="submit"
+        >
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </form>
+    </ul>
+    <ul
+      class="navbar-nav me-auto ms-auto d-md-flex d-lg-none align-items-center justify-content-center"
+    >
+      <button class="btn btn-outline-primary d-flex align-items-center gap-2">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ul>
+    <ul
+      class="navbar-nav d-flex flex-row align-items-center justify-content-center gap-4"
+    >
+      <li class="nav-item p-2">
+        <a
+          class="nav-icon d-flex align-content-center gap-1"
+          data-bs-toggle="offcanvas"
+          href="#offCanvasAjuda"
+          role="button"
+          aria-controls="offCanvasAjuda"
+        >
+          <ion-icon name="help-buoy"></ion-icon>
+          <span class="nav-icon-span text-nowrap d-none d-md-block">Ajuda</span>
+        </a>
+      </li>
+      <li class="nav-item p-2">
+        <a
+          class="nav-icon d-flex align-content-center gap-1"
+          data-bs-toggle="offcanvas"
+          href="#offCanvasRegistrar"
+          role="button"
+        >
+          <ion-icon name="person-circle"></ion-icon>
+          <span class="nav-icon-span text-nowrap d-none d-md-block"
+            >Registrar-se</span
           >
-            <ion-icon name="search"></ion-icon>
-          </button>
-        </form>
-      </ul>
-      <ul
-        class="navbar-nav d-flex flex-row align-items-center justify-content-center gap-4"
-      >
-        <li class="nav-item">
-          <a
-            class="nav-icon d-flex align-content-center gap-1"
-            data-bs-toggle="offcanvas"
-            href="#offCanvasAjuda"
-            role="button"
-            aria-controls="offCanvasAjuda"
-          >
-            <ion-icon name="help-buoy"></ion-icon>
-            <span class="nav-icon-span text-nowrap">Ajuda</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-icon d-flex align-content-center gap-1"
-            data-bs-toggle="offcanvas"
-            href="#offCanvasRegistrar"
-            role="button"
-          >
-            <ion-icon name="person-circle"></ion-icon>
-            <span class="nav-icon-span text-nowrap">Registrar-se</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+        </a>
+      </li>
+    </ul>
   </nav>
   <div
     class="offcanvas offcanvas-end"
