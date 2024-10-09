@@ -1,12 +1,13 @@
 <script setup lang="ts">
-
 // Função para fechar qualquer offcanvas aberto e remover o backdrop manualmente
 const closeOffcanvas = () => {
   // Seleciona todos os offcanvas abertos
-  const offcanvasElements = document.querySelectorAll('.offcanvas.show');
+  const offcanvasElements = document.querySelectorAll(".offcanvas.show");
 
   offcanvasElements.forEach((element) => {
-    const offcanvasInstance = (window as any).bootstrap.Offcanvas.getInstance(element as HTMLElement);
+    const offcanvasInstance = (window as any).bootstrap.Offcanvas.getInstance(
+      element as HTMLElement
+    );
     if (offcanvasInstance) {
       offcanvasInstance.hide(); // Fecha o offcanvas
     }
@@ -14,108 +15,109 @@ const closeOffcanvas = () => {
 
   // Cria um listener para o evento de fechamento e remove após ser disparado
   const handleOffcanvasHidden = () => {
-    const backdrop = document.querySelector('.offcanvas-backdrop');
+    const backdrop = document.querySelector(".offcanvas-backdrop");
     if (backdrop) {
       backdrop.remove(); // Remove o fundo escuro (overlay) manualmente
     }
-    document.body.classList.remove('offcanvas-open'); // Remove a classe que desativa o scroll
-    document.removeEventListener('hidden.bs.offcanvas', handleOffcanvasHidden); // Remove o listener
+    document.body.classList.remove("offcanvas-open"); // Remove a classe que desativa o scroll
+    document.removeEventListener("hidden.bs.offcanvas", handleOffcanvasHidden); // Remove o listener
   };
 
   // Adiciona o evento para remover o backdrop após o fechamento
-  document.addEventListener('hidden.bs.offcanvas', handleOffcanvasHidden);
+  document.addEventListener("hidden.bs.offcanvas", handleOffcanvasHidden);
 };
 </script>
 
 <template>
   <!-- Início da seção da navbar -->
-  <div class="navbar navbar-expand-lg bg-body-tertiary top-0 px-2">
-    
-      <router-link class="navbar-brand" :to="{ name: 'landing-page' }">
-        <img
-          src="../assets/images/PetSpot-PNG.png"
-          alt="PetSpot"
-          class="nav-brand-icon d-inline-block align-text-top"
-        />
-      </router-link>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse navbar-collapse-lg" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto d-flex align-items-center gap-2">
-          <li class="nav-item text-nowrap">
-            <router-link class="nav-link" :to="{ name: 'our-services-page' }"
-              >Nossos Serviços</router-link
-            >
-          </li>
-          <li class="nav-item text-nowrap">
-            <router-link class="nav-link" :to="{ name: 'about-us-page' }"
-              >Sobre Nós</router-link
-            >
-          </li>
-          <li class="nav-item text-nowrap">
-            <router-link class="nav-link" :to="{ name: 'our-partners-page' }"
-              >Parceiros</router-link
-            >
-          </li>
-          <li class="nav-item text-nowrap">
-            <router-link class="nav-link" :to="{ name: 'contact-us-page' }"
-              >Fale conosco</router-link
-            >
-          </li>
-        </ul>
-        <ul class="navbar-nav me-auto">
-          <form class="d-flex gap-2 mx-2" role="search">
-            <input
-              class="form-control"
-              type="search"
-              placeholder="Pesquisar..."
-              aria-label="Pesquisar"
-            />
-            <button
-              class="btn btn-outline-primary d-flex align-items-center gap-2"
-              type="submit"
-            >
-              <ion-icon name="search"></ion-icon>
-            </button>
-          </form>
-        </ul>
-        <ul class="navbar-nav d-flex aling-items-center gap-4">
-          <li class="nav-item d-flex gap-4">
-            <a
-              class="nav-icon"
-              data-bs-toggle="offcanvas"
-              href="#offCanvasAjuda"
-              role="button"
-              aria-controls="offCanvasAjuda"
-            >
-              <ion-icon name="help-buoy"></ion-icon>
-              <span class="nav-icon-span text-nowrap">Ajuda</span>
-            </a>
-          </li>
-          <li class="nav-item d-flex gap-4">
-            <a
-              class="nav-icon"
-              data-bs-toggle="offcanvas"
-              href="#offCanvasRegistrar"
-              role="button"
-            >
-              <ion-icon name="person-circle"></ion-icon>
-              <span class="nav-icon-span text-nowrap">Registrar-se</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
+  <nav class="navbar navbar-expand-lg bg-body-tertiary top-0 px-2">
+    <router-link class="navbar-brand" :to="{ name: 'landing-page' }">
+      <img
+        src="../assets/images/PetSpot-PNG.png"
+        alt="PetSpot"
+        class="nav-brand-icon d-inline-block align-text-top"
+      />
+    </router-link>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse navbar-collapse-lg"
+      id="navbarSupportedContent"
+    >
+      <ul class="navbar-nav me-auto d-flex align-items-center gap-2">
+        <li class="nav-item text-nowrap">
+          <router-link class="nav-link" :to="{ name: 'our-services-page' }"
+            >Nossos Serviços</router-link
+          >
+        </li>
+        <li class="nav-item text-nowrap">
+          <router-link class="nav-link" :to="{ name: 'about-us-page' }"
+            >Sobre Nós</router-link
+          >
+        </li>
+        <li class="nav-item text-nowrap">
+          <router-link class="nav-link" :to="{ name: 'our-partners-page' }"
+            >Parceiros</router-link
+          >
+        </li>
+        <li class="nav-item text-nowrap">
+          <router-link class="nav-link" :to="{ name: 'contact-us-page' }"
+            >Fale conosco</router-link
+          >
+        </li>
+      </ul>
+      <ul class="navbar-nav me-auto">
+        <form class="d-flex gap-2 mx-2" role="search">
+          <input
+            class="form-control"
+            type="search"
+            placeholder="Pesquisar..."
+            aria-label="Pesquisar"
+          />
+          <button
+            class="btn btn-outline-primary d-flex align-items-center gap-2"
+            type="submit"
+          >
+            <ion-icon name="search"></ion-icon>
+          </button>
+        </form>
+      </ul>
+      <ul class="navbar-nav d-flex aling-items-center gap-4">
+        <li class="nav-item d-flex gap-4">
+          <a
+            class="nav-icon"
+            data-bs-toggle="offcanvas"
+            href="#offCanvasAjuda"
+            role="button"
+            aria-controls="offCanvasAjuda"
+          >
+            <ion-icon name="help-buoy"></ion-icon>
+            <span class="nav-icon-span text-nowrap">Ajuda</span>
+          </a>
+        </li>
+        <li class="nav-item d-flex gap-4">
+          <a
+            class="nav-icon"
+            data-bs-toggle="offcanvas"
+            href="#offCanvasRegistrar"
+            role="button"
+          >
+            <ion-icon name="person-circle"></ion-icon>
+            <span class="nav-icon-span text-nowrap">Registrar-se</span>
+          </a>
+        </li>
+      </ul>
     </div>
+  </nav>
   <div
     class="offcanvas offcanvas-end"
     tabindex="-1"
@@ -233,8 +235,8 @@ const closeOffcanvas = () => {
 
 @media (max-width: 767.98px) {
   .navbar {
-    position: -webkit-sticky;
-    position: sticky;
+    position: -webkit-static;
+    position: static;
     top: 0;
     z-index: 1020;
   }
@@ -244,7 +246,7 @@ const closeOffcanvas = () => {
 
 @media (min-width: 768px) {
   .navbar {
-    position: fixed;
+    position: static;
     top: 0;
     width: 100%;
     z-index: 1030;

@@ -1,12 +1,12 @@
 import { createApp } from "vue";
-import "./style.css"; // Seu arquivo de estilo personalizado
-import App from "./App.vue";
+import "../../styles/css/style.css"; // Seu arquivo de estilo personalizado
+import App from "../../App.vue";
 
 // Importando Vuetify
-import vuetify from "./plugins/vuetify.ts";
+import vuetify from "../../plugins/vuetify.ts";
 
 // Importando o Router
-import router from "./router";
+import router from "../../router/index.ts";
 
 // Criando e montando o aplicativo Vue
 const app = createApp(App);
