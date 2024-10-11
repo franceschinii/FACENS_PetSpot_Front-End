@@ -14,7 +14,7 @@
     "petspot": "file:",
     "vue": "^3.4.37",
     "vue-router": "^4.4.5",
-    "vuetify": "^3.7.1"
+    "vuetify": "^3.7.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
