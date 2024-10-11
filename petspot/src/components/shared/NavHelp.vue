@@ -12,7 +12,7 @@
         aria-controls="offCanvasAjuda"
       >
         <ion-icon name="help-buoy" class="nav-icon"></ion-icon>
-        <span class="nav-icon-span text-nowrap d-none d-md-block">Ajuda</span>
+        <span class="nav-icon-span text-nowrap d-none d-md-none d-lg-block">Ajuda</span>
       </a>
     </li>
     <li class="nav-item p-2">
@@ -23,7 +23,7 @@
         role="button"
       >
         <ion-icon name="person-circle" class="nav-icon"></ion-icon>
-        <span class="nav-icon-span text-nowrap d-none d-md-block"
+        <span class="nav-icon-span text-nowrap d-none d-md-none d-lg-block"
           >Registrar-se</span
         >
       </a>
