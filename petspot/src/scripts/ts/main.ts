@@ -1,6 +1,6 @@
- import { createApp } from "vue";
-import "../../styles/css/custom.css"; // Bootstrap customizado
+import { createApp } from "vue";
 import "../../styles/css/style.css"; // Arquivo de estilo personalizado
+import "../../styles/css/custom.css"; // Bootstrap customizado
 import App from "../../App.vue";
 
 // Importando Vuetify
