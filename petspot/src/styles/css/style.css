@@ -30,3 +30,9 @@
 }
 
 /* Alterações no específicas no Bootstrap */
+
+/* Alterações em componentes globais */
+
+hr {
+  color: var(--brand-color) !important;
+}
