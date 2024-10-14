@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ShapeDivider1 from "../components/common/ShapeDivider1.vue";
 import ShapeDivider2 from "../components/common/ShapeDivider2.vue";
+import FooterComponent from "../layouts/FooterComponent.vue";
 import HeaderComponent from "../layouts/HeaderComponent.vue";
 </script>
 
@@ -26,7 +27,7 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
         </div>
         <div class="col-12 col-md-6 d-flex justify-center align-items-center">
           <div
-            class="card bg-info p-4 rounded-circle shadow w-lg-75 h-lg-75 w-md-100 h-md-100 w-75 h-75"
+            class="card bg-info p-4 rounded-circle shadow border-2 border-light w-lg-75 h-lg-75 w-md-100 h-md-100 w-75 h-75"
           >
             <img
               src="../assets/images/Cachorro-PNG-1.png"
@@ -118,6 +119,9 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
         </div>
       </div>
     </div>
+  </section>
+  <section id="footer-section">
+    <FooterComponent />
   </section>
 </template>
 
