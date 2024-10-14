@@ -10,11 +10,9 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
   <section id="presentation-card" class="p-5">
     <div class="container">
       <div
-        class="row d-flex flex-column-reverse flex-md-row justify-content-between align-items-center"
+        class="row d-flex flex-md-row flex-column-reverse justify-content-between align-items-center"
       >
-        <div
-          class="col-12 col-md-6 bg-light p-md-5 p-4 rounded-5 shadow w-100 w-md-50"
-        >
+        <div class="col-12 col-md-6 bg-light p-md-5 p-4 rounded-5 shadow">
           <h1>Um lugar para cuidar do seu Pet!</h1>
           <p>A plataforma inteligente, criada com amor para o seu pet.</p>
           <a href="#" class="btn btn-primary"
@@ -25,9 +23,11 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
               ></ion-icon></span
           ></a>
         </div>
-        <div class="col-12 col-md-6 d-flex justify-center align-items-center">
+        <div
+          class="col-12 col-md-6 d-flex justify-content-center align-items-center"
+        >
           <div
-            class="card bg-info p-4 rounded-circle shadow border-2 border-light w-lg-75 h-lg-75 w-md-100 h-md-100 w-75 h-75"
+            class="card bg-primary p-4 rounded-circle shadow border-2 border-light w-75 h-75"
           >
             <img
               src="../assets/images/Cachorro-PNG-1.png"
