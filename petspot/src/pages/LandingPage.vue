@@ -45,7 +45,7 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
   <section id="services-row" class="p-5">
     <div class="container">
       <div
-        class="row d-flex flex-column-reverse flex-md-row justify-content-between align-items-center"
+        class="row d-flex flex-column flex-md-row justify-content-between align-items-center"
       >
         <div
           class="col-12 d-flex justify-content-start align-items-center mb-3"
