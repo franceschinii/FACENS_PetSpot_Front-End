@@ -1,9 +1,29 @@
 /* Importar Fontes Google */
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Itim&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 .varela-round-regular {
   font-family: "Varela Round", sans-serif;
   font-weight: 400;
+  font-style: normal;
+}
+
+.itim-regular {
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.balsamiq-sans-regular {
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.balsamiq-sans-bold {
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -38,4 +58,33 @@ hr {
   height: 0 !important;
   margin: 1rem 0 !important; /* Espaçamento vertical */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08) !important; /* Sombra suave */
+}
+
+h1 {
+  font-family: "Itim", cursive;
+}
+
+h2 {
+  font-family: "Itim", cursive;
+}
+
+h3 {
+  font-family: "Itim", cursive;
+}
+
+h4 {
+  font-family: "Itim", cursive;
+}
+
+h5 {
+  font-family: "Itim", cursive;
+}
+
+button,
+span,
+li,
+a,
+small,
+p {
+  font-family: "Balsamiq Sans", sans-serif;
 }

@@ -15,16 +15,13 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
         <div
           class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start gap-3 bg-light p-md-5 p-4 rounded-5 shadow"
         >
-          <h1>Um lugar para cuidar do seu Pet!</h1>
-          <p>
-            A <strong>plataforma inteligente</strong> do PetSpot foi criada para
-            centralizar todas as informações dos pets em um só lugar,
-            facilitando o dia a dia dos tutores.
-            <em>Com dedicação e carinho</em>, promovemos uma experiência
-            eficiente que conecta tutores e veterinários, além de oferecer
-            acesso rápido ao histórico médico dos animais. Substituímos as
-            carteirinhas físicas por uma versão digital, garantindo o
-            <strong>bem-estar</strong> dos pets e a
+          <h1 class="fw-bold">Um lugar para cuidar do seu Pet!</h1>
+          <p class="fs-5">
+            A <strong>plataforma inteligente</strong> do PetSpot centraliza
+            informações dos pets, facilitando o dia a dia dos tutores. Com
+            dedicação, conectamos tutores e veterinários, oferecendo acesso
+            rápido ao histórico médico dos animais e carteirinhas digitais para
+            garantir o <strong>bem-estar</strong> dos pets e a
             <strong>tranquilidade</strong> de seus cuidadores.
           </p>
           <a href="#" class="btn btn-primary"
@@ -62,7 +59,7 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
         <div
           class="col-12 d-flex justify-content-start align-items-center mb-3"
         >
-          <h2 class="text-decoration-underline">Serviços</h2>
+          <h2>Serviços</h2>
         </div>
         <div class="col">
           <div class="card">
