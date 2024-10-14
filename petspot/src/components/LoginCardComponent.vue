@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div
@@ -14,7 +13,12 @@
       >
         <h1>Conectar-se</h1>
         <div class="col-md-12">
-          <label for="email" class="form-label">Email</label>
+          <label for="email" class="form-label d-flex align-items-center gap-2"
+            >Email<ion-icon
+              name="mail-outline"
+              class="logincard-label-icon"
+            ></ion-icon
+          ></label>
           <input
             type="email"
             class="form-control"
@@ -23,7 +27,12 @@
           />
         </div>
         <div class="col-md-12">
-          <label for="senha" class="form-label">Senha</label>
+          <label for="senha" class="form-label d-flex align-items-center gap-2"
+            >Senha<ion-icon
+              name="key-outline"
+              class="logincard-label-icon"
+            ></ion-icon
+          ></label>
           <input
             type="password"
             class="form-control"
@@ -34,15 +43,29 @@
         <div class="col-md-12">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="termos-check" />
-            <label class="form-check-label" for="termos-check">
-              Mantenha me conectado
+            <label
+              class="form-check-label d-flex align-items-center gap-2"
+              for="termos-check"
+            >
+              Mantenha me conectado<ion-icon
+                name="cloudy-outline"
+                size="small"
+              ></ion-icon>
             </label>
           </div>
         </div>
         <div class="col-md-12 py-md-0 py-4 d-flex justify-content-between">
-          <a class="py-2 logincard-link" href="forgot-password.html">Esqueci minha senha</a>
-          <button type="submit" class="btn btn-primary text-light logincard-link" id="botao-cadastrar">
-            Entrar
+          <a
+            class="logincard-link d-flex align-items-center gap-2"
+            href="forgot-password.html"
+            >Esqueci minha senha <ion-icon name="hand-left-outline"></ion-icon
+          ></a>
+          <button
+            type="submit"
+            class="btn btn-primary text-light logincard-link d-flex align-items-center gap-2"
+            id="botao-cadastrar"
+          >
+            Entrar<ion-icon name="enter" class="logincard-icon"></ion-icon>
           </button>
         </div>
       </form>
@@ -51,10 +74,18 @@
 </template>
 
 <style scoped>
-
 /* Estilo padrão do botão */
 .logincard-link {
+  font-size: 1.1rem;
   transition: transform 0.3s ease;
+}
+
+.logincard-icon {
+  font-size: 1.5rem;
+}
+
+.logincard-label-icon {
+  font-size: 1.25rem;
 }
 
 /* Aumenta o botão em 5% no hover */
@@ -62,4 +93,3 @@
   transform: scale(1.05);
 }
 </style>
-
