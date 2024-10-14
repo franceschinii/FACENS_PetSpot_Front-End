@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ShapeDivider1 from "../components/common/ShapeDivider1.vue";
+import ShapeDivider2 from "../components/common/ShapeDivider2.vue";
 import HeaderComponent from "../layouts/HeaderComponent.vue";
 </script>
 
@@ -37,11 +39,18 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
     </div>
   </section>
   <hr />
+  <div class="d-md-block d-none"><ShapeDivider1 /></div>
+  <div class="d-md-none d-block"><ShapeDivider2 /></div>
   <section id="services-row" class="p-5">
     <div class="container">
       <div
         class="row d-flex flex-column-reverse flex-md-row justify-content-between align-items-center"
       >
+        <div
+          class="col-12 d-flex justify-content-start align-items-center mb-3"
+        >
+          <h2 class="text-decoration-underline">Serviços</h2>
+        </div>
         <div class="col">
           <div class="card">
             <img src="..." class="card-img-top" alt="..." />
@@ -115,9 +124,5 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
 <style scoped>
 .button-icon {
   font-size: 1.2rem;
-}
-.border {
-  border-width: 0.15rem !important;
-  border-color: var(--brand-color) !important;
 }
 </style>

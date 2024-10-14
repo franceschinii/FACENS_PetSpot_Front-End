@@ -32,7 +32,10 @@
 /* Alterações no específicas no Bootstrap */
 
 /* Alterações em componentes globais */
-
 hr {
-  color: var(--brand-color) !important;
+  border: none !important; /* Remove a borda padrão */
+  border-top: 0.15rem dashed var(--brand-color) !important; /* Borda superior pontilhada */
+  height: 0 !important;
+  margin: 1rem 0 !important; /* Espaçamento vertical */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08) !important; /* Sombra suave */
 }
