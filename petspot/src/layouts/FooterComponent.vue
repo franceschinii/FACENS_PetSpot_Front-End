@@ -14,7 +14,7 @@ import ShapeDivider3 from "../components/common/ShapeDivider3.vue";
       >
         <!-- Seção sobre nós -->
         <div
-          class="col-lg-4 col-md-4 p-2 d-flex flex-column align-items-center"
+          class="col-lg-4 col-md-4 py-2 px-4 d-flex flex-column align-items-center"
         >
           <h5 class="text-uppercase text-white">Sobre o PetSpot</h5>
           <p class="text-white">

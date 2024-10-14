@@ -25,9 +25,9 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
             <strong>tranquilidade</strong> de seus cuidadores.
           </p>
           <a href="#" class="btn btn-primary"
-            ><span class="d-flex align-center text-light gap-2"
+            ><span class="d-flex align-items-center text-light gap-2"
               >Conheça mais<ion-icon
-                name="paw-outline"
+                name="paw"
                 class="button-icon"
               ></ion-icon></span
           ></a>
