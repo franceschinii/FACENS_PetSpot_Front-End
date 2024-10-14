@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <div class="custom-shape-divider-bottom-1728879863">
+  <div class="custom-shape-divider-bottom-1728883350">
     <svg
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
@@ -25,9 +25,10 @@
   </div>
 </template>
 <style scoped>
-.custom-shape-divider-bottom-1728879863 {
+.custom-shape-divider-bottom-1728883350 {
   position: static;
-  bottom: 0;
+
+  top: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -35,15 +36,15 @@
   transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1728879863 svg {
+.custom-shape-divider-bottom-1728883350 svg {
   position: relative;
   display: block;
   width: calc(175% + 1.3px);
-  height: 200px;
+  height: 50px;
   transform: rotateY(180deg);
 }
 
-.custom-shape-divider-bottom-1728879863 .shape-fill {
+.custom-shape-divider-bottom-1728883350 .shape-fill {
   fill: var(--brand-color);
 }
 </style>
