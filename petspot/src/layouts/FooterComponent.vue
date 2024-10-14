@@ -70,15 +70,15 @@ import ShapeDivider3 from "../components/common/ShapeDivider3.vue";
           <h5 class="text-uppercase text-white">Contato</h5>
           <ul class="list-unstyled">
             <li class="d-flex align-items-center gap-2">
-              <ion-icon name="mail-outline"></ion-icon>
+              <ion-icon name="mail"></ion-icon>
               contato@petspot.com
             </li>
             <li class="d-flex align-items-center gap-2">
-              <ion-icon name="location-outline"></ion-icon>
+              <ion-icon name="location"></ion-icon>
               Rua Exemplo, 123, São Paulo, SP
             </li>
             <li class="d-flex align-items-center gap-2">
-              <ion-icon name="call-outline"></ion-icon>
+              <ion-icon name="call"></ion-icon>
               (11) 99999-9999
             </li>
           </ul>
