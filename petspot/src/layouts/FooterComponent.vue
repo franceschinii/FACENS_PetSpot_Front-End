@@ -109,7 +109,7 @@ import ShapeDivider3 from "../components/common/ShapeDivider3.vue";
 
 <style scoped>
 footer {
-  margin-top: -1px;
+  margin-top: -0.5rem;
 }
 footer .list-unstyled {
   list-style: none;

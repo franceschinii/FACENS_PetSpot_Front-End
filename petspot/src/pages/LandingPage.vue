@@ -10,10 +10,10 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
   <section id="presentation-card" class="p-5">
     <div class="container">
       <div
-        class="row d-flex flex-md-row flex-column-reverse justify-content-between align-items-center"
+        class="row d-flex flex-column-reverse flex-md-column-reverse flex-lg-column-reverse flex-xl-row justify-content-between align-items-center"
       >
         <div
-          class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start gap-3 bg-light p-md-5 p-4 rounded-5 shadow"
+          class="col-12 col-md-12 col-lg-12 col-xl-6 d-flex flex-column justify-content-center align-items-start gap-3 bg-light p-md-5 p-4 rounded-5 shadow"
         >
           <h1 class="fw-bold">Um lugar para cuidar do seu Pet!</h1>
           <p class="fs-5">
@@ -33,10 +33,19 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
           ></a>
         </div>
         <div
-          class="col-12 col-md-6 d-flex justify-content-center align-items-center"
+          class="col-12 col-md-12 col-lg-12 col-xl-6 d-flex justify-content-center align-items-center"
         >
           <div
-            class="card bg-primary p-4 rounded-circle shadow border-2 border-light w-75 h-75"
+            class="d-flex d-md-none card bg-primary p-4 rounded-circle shadow border-2 border-light w-75 h-75"
+          >
+            <img
+              src="../assets/images/Cachorro-PNG-1.png"
+              alt="Cachorro feliz"
+              class="img-fluid rounded-circle"
+            />
+          </div>
+          <div
+            class="d-none d-md-flex card bg-primary p-4 rounded-circle shadow border-2 border-light w-75 h-75"
           >
             <img
               src="../assets/images/Cachorro-PNG-1.png"
@@ -59,7 +68,10 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
         <div
           class="col-12 d-flex justify-content-start align-items-center mb-3"
         >
-          <h2>Serviços</h2>
+          <h2 id="services-title" class="fw-bold">
+            Serviços
+            <hr id="services-underline" />
+          </h2>
         </div>
         <div class="col">
           <div class="card">
@@ -143,5 +155,12 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
 }
 .button-icon {
   font-size: 1.2rem;
+}
+
+hr#services-underline {
+  opacity: 100%;
+  margin: 0.5rem 0 !important; /* Espaçamento vertical */
+  border-top: 0.15rem solid var(--brand-color) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08) !important; /* Sombra suave */
 }
 </style>
