@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 <template>
   <ul
-    class="navbar-nav me-lg-auto ms-lg-auto d-none d-md-none d-lg-flex align-items-center justify-content-center"
+    class="navbar-nav me-lg-auto ms-lg-auto d-none d-md-none d-lg-none d-xl-flex align-items-center justify-content-center"
   >
     <form class="d-flex gap-2" role="search">
       <input
@@ -20,7 +20,7 @@
   </ul>
 
   <ul
-    class="navbar-nav me-auto ms-auto d-none d-md-flex d-lg-none align-items-center justify-content-center"
+    class="navbar-nav me-auto ms-auto d-none d-md-flex d-lg-flex d-xl-none align-items-center justify-content-center"
   >
     <button
       class="btn btn-primary border-2 rounded rounded-pill d-flex align-items-center justify-content-center text-light gap-2 p-2"
@@ -30,7 +30,7 @@
     </button>
   </ul>
   <ul
-    class="navbar-nav me-auto ms-auto d-flex d-md-none d-lg-none align-items-center justify-content-center"
+    class="navbar-nav me-auto ms-auto d-flex d-md-none d-lg-none d-xl-none align-items-center justify-content-center"
   >
     <button
       class="btn btn-primary border-2 rounded rounded-pill d-flex align-items-center justify-content-center text-light gap-2 p-2"

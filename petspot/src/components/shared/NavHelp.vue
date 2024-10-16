@@ -13,7 +13,7 @@
       >
         <ion-icon name="help-buoy" class="nav-icon"></ion-icon>
         <span
-          class="nav-icon-span text-nowrap d-none d-md-none d-lg-none d-xl-block"
+          class="nav-icon-span text-nowrap d-none d-md-none d-lg-none d-xl-block fs-5"
           >Ajuda</span
         >
       </a>
@@ -27,7 +27,7 @@
       >
         <ion-icon name="person-circle" class="nav-icon"></ion-icon>
         <span
-          class="nav-icon-span text-nowrap d-none d-md-none d-lg-none d-xl-block"
+          class="nav-icon-span text-nowrap d-none d-md-none d-lg-none d-xl-block fs-5"
           >Registrar-se</span
         >
       </a>

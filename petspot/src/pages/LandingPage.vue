@@ -135,6 +135,12 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
 </template>
 
 <style scoped>
+#presentation-card {
+  background-image: url("../assets/images/svg/background-presetation-card.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .button-icon {
   font-size: 1.2rem;
 }
