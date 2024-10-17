@@ -1,6 +1,6 @@
 # PetSpot - Plataforma Inteligente para Pets
 
-![PetSpot Logo](./src/assets/images/PetSpot-PNG.png)
+![PetSpot Logo](./petspot/src/assets/images/PetSpot-PNG.png)
 
 ## 📋 Sobre o Projeto
 
