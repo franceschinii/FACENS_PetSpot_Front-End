@@ -77,11 +77,12 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
           <div class="card">
             <img src="..." class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+              <h5 class="card-title fs-4 fw-semibold">
+                Agendamento de consultas
+              </h5>
+              <p class="card-text fs-6">
+                Organize consultas e mantenha tudo sob controle de forma
+                prática.
               </p>
             </div>
           </div>
@@ -90,11 +91,11 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
           <div class="card">
             <img src="..." class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title fs-4 fw-semibold">
+                Carteirinha de vacinação
+              </h5>
               <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                Acompanhe e atualize as vacinas do seu pet de forma digital.
               </p>
             </div>
           </div>
@@ -103,11 +104,12 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
           <div class="card">
             <img src="..." class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title fs-4 fw-semibold">
+                Consulta à prontuários
+              </h5>
               <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                Acesse o histórico médico completo do seu pet com apenas alguns
+                cliques.
               </p>
             </div>
           </div>
@@ -116,11 +118,12 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
           <div class="card">
             <img src="..." class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title fs-4 fw-semibold">
+                Converse facilmente com veterinários
+              </h5>
               <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                Tire dúvidas e receba orientações diretamente dos veterinários
+                do seu Pet.
               </p>
             </div>
           </div>
@@ -129,11 +132,9 @@ import HeaderComponent from "../layouts/HeaderComponent.vue";
           <div class="card">
             <img src="..." class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title fs-4 fw-semibold">Cadastre Seu Pet</h5>
               <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                Centralize todas as informações do seu pet de forma organizada em um só local.
               </p>
             </div>
           </div>
