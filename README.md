@@ -43,6 +43,7 @@ Entre na pasta do projeto e instale as dependências:
 
 ```bash
 cd seu-repositorio
+cd petspot
 npm install
 ```
 
