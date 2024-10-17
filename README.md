@@ -12,11 +12,9 @@ O projeto foi construído utilizando as seguintes tecnologias:
 
 - **Vue.js 3**
 - **Vite** para empacotamento e build
-- **Vuetify** como biblioteca de UI
 - **Bootstrap** via CDN para estilização adicional
 - **Ionicons** via CDN para ícones
 - **Pinia** para gerenciamento de estado
-- **Socket.IO** para comunicação em tempo real
 
 ## ⚙️ Pré-requisitos
 
