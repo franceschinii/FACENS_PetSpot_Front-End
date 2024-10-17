@@ -135,4 +135,3 @@ Este projeto está sob a licença MIT.
 ---
 
 Desenvolvido com ❤️ por **[André Franceschini](https://github.com/franceschinii)**.
-```
